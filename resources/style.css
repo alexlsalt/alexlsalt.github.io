@@ -1,0 +1,8 @@
+/* Header section */
+
+.header {
+  background-image: url(file:///Users/alexmorton/Desktop/lauren-mancke-60627-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
