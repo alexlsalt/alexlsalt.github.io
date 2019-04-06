@@ -16,6 +16,14 @@ h1 {
   font-size: 2rem;
 }
 
+@media only screen and (max-width: 500px) {
+  body {
+    margin: 0 auto;
+  }
+}
+
+/* Navigation */
+
 nav {
   display: flex;
   flex-direction: row;
