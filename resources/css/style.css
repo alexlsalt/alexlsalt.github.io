@@ -185,6 +185,30 @@ nav span{
   font-size: 1.2rem;
 }
 
+.section a {
+  color: lightblue;
+}
+
+.achievements {
+  text-align: center;
+}
+
+.achievements span {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+}
+
+.achievements a {
+  color: gray;
+  background-color: lightblue;
+  padding: 0.5rem;
+  border: 1px solid navy;
+}
+
+.achievements a:hover {
+  color: navy;
+}
+
 @media only screen and (max-width: 768px) {
   .section.words {
     text-align: center;
