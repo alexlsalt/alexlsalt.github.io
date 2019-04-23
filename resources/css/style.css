@@ -238,8 +238,6 @@ nav span{
 /* Projects section */
 
 .projects {
-  background-color: gray;
-  height: 12rem;
   margin-top: 2rem;
   padding-top: 1.5rem;
 }
@@ -247,7 +245,7 @@ nav span{
 .project.carousel {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   width: 100%;
 }
 
@@ -262,26 +260,26 @@ nav span{
     align-items: center;
   }
 
-}
-.project.carousel img {
-  width: 17rem;
-  height: 14rem;
-  border: 2px black solid;
-  margin: 0.5rem;
-}
+  }
+  .project.carousel img {
+    width: 20rem;
+    height: 16rem;
+    border: 2px black solid;
+    margin: 0.5rem;
+  }
 
-.project.carousel img:hover {
-  opacity: 0.8;
-}
+  .project.carousel img:hover {
+    opacity: 0.8;
+  }
 
-.projects h1 {
-  background-color: black;
-  font-weight: lighter;
-  font-size: 2.5rem;
-  padding: 1.5rem;
-  align-self: center;
-  margin-bottom: 1.2rem;
-}
+  .projects h1 {
+    background-color: black;
+    font-weight: lighter;
+    font-size: 2.5rem;
+    padding: 1.5rem;
+    align-self: center;
+    margin-bottom: 1.2rem;
+  }
 
 @media only screen and (max-width: 480px) {
   .projects h1 {
@@ -293,7 +291,7 @@ nav span{
 /* Footer */
 
 footer {
-  margin-top: 12rem;
+  margin-top: 2rem;
   background-color: lightblue;
   height: 3rem;
   color: white;
@@ -322,9 +320,4 @@ footer span {
 
 .contact img:hover {
   opacity: 0.5;
-}
-
-@media only screen and (max-width: 480px) {
-  footer {
-   margin-top: 2rem;
 }
