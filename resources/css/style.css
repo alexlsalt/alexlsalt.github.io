@@ -16,12 +16,32 @@ h1 {
   font-size: 2rem;
 }
 
+h2 {
+  font-size: 2.5rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
 h3 {
   font-family: 'Montserrat', sans-serif;
   color: black;
   text-align: center;
   font-size: 1.7rem;
   line-height: 1.2;
+}
+
+.box-title {
+  padding: 0.5rem;
+  border: 3px solid lightblue;
+}
+
+.half-highlight {
+  background-image: linear-gradient(to right, transparent 50%, #f3f315 50%);
+  background-origin: 0;
+  background-size: 200% 50%;
+  background-repeat: repeat-x;
+  background-position: 0 100%;
+  transition: background-position 0.7s;
+  background-position: -100% 100%;
 }
 
 @media only screen and (max-width: 480px) {
@@ -123,14 +143,13 @@ nav span{
 }
 
 .main h1 {
-  background-color: black;
+  background-color: gray;
   opacity: 0.8;
   font-weight: lighter;
   font-size: 3rem;
   padding: 1.5rem;
   width: 100%;
   margin-bottom: 6rem;
-  font-family: 'Montserrat', sans-serif;
 }
 
 @media only screen and (max-width: 768px) {
@@ -157,10 +176,8 @@ nav span{
 }
 
 .sections h2 {
-  font-size: 2.5rem;
   text-align: center;
   margin-bottom: 1.5rem;
-  font-family: 'Playfair Display', sans-serif;
 }
 
 .section img {
@@ -193,10 +210,9 @@ nav span{
   margin-top: 1.5rem;
 }
 
-.achievements h2 {
-  font-size: 2rem;
+.achievements h1 {
+  color: black;
   margin-bottom: 1.5rem;
-  font-family: 'Playfair Display', sans-serif;
 }
 
 .achievements ul {
@@ -244,10 +260,50 @@ nav span{
   }
 }
 
+/* Articles section */
+
+.articles {
+  height: 10rem;
+  margin-top: 2rem;
+}
+
+.articles h2 {
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+  background-color: lightblue;
+}
+
+.articles a {
+  color: navy;
+}
+
+.articles a:hover {
+  background-image: linear-gradient(to right, transparent 50%, yellow 50%);
+  background-origin: 0;
+  background-size: 200% 50%;
+  background-repeat: repeat-x;
+  background-position: 0 100%;
+  transition: background-position 0.7s;
+  background-position: -100% 100%;
+}
+
+.articles ul {
+  margin-top: 1.5rem;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.articles li {
+  padding: 0.5rem;
+  font-size: 1.5rem;
+}
+
+
 /* Projects section */
 
 .projects {
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   padding-top: 1.5rem;
 }
 
@@ -282,7 +338,7 @@ nav span{
   }
 
   .projects h1 {
-    background-color: black;
+    background-color: lightblue;
     font-weight: lighter;
     font-size: 2.5rem;
     padding: 1.5rem;
