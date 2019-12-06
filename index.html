@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="./resources/css/reset.css">
     <link rel="stylesheet" href="./resources/css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat|Poppins:400,400i,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="./resources/images/favicon.png" type="image/x-icon">
     <link rel="icon" href="./resources/images/favicon.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Playfair+Display|Roboto+Slab" rel="stylesheet">
@@ -22,58 +22,132 @@
         <span>Alex Morton | Creative Developer</span>
       </div>
       <ul>
-        <li><a href="#mission">About</a></li>
-        <li><a href="#projects">Portfolio</a></li>
+        <li><a id="home-button" href="#">Home</a></li>
+        <li><a id="projects-button" href="#">Projects</a></li>
         <li><a href="#footer">Contact</a></li>
       </ul>
     </nav>
 
-    <section class="main">
+  <!--  <section class="main">
       <h1>Let's {create} something amazing</h1>
-    </section>
-
-    <section class="mission" id="mission">
-      <div class="sections">
-        <div class="section">
-          <img src="./resources/images/alex_gif.gif" alt="girl with glasses">
-        </div>
-        <div class="section words">
-          <h2 class="box-title">Alex Morton</h2>
-          <ul class="words">
-            <li>California native living in Toulouse, France</li>
-            <li>UC Berkeley Class of 2014 | B.A. English Literature</li>
-            <li>Passionate about pursuing creative impulses</li>
-          </ul>
-          <div class="achievements">
-            <h2 class="box-title">Technical Skills</h2>
-            <h3>HTML/CSS | Javascript</h3>
+    </section> -->
+    <section id="home">
+      <section class="mission" id="mission">
+        <div class="sections">
+          <div class="section">
+            <img src="./resources/images/alex_gif.gif" alt="girl with glasses">
+          </div>
+          <div class="section words">
+            <h2 class="box-title">Alex Morton</h2>
+            <ul class="words">
+              <li>California native living in Toulouse, France</li>
+              <li>UC Berkeley Alum (Go Bears!)</li>
+              <li>Passionate about pursuing creative impulses</li>
+              <li>Seeking a position as a front-end web developer</li>
+            </ul>
+            <div class="achievements">
+              <h2 class="box-title">Technical Skills</h2>
+              <h3>HTML | CSS | Javascript | React</h3>
+            </div>
           </div>
         </div>
-      </div>
 
+      </section>
+
+      <section class="articles">
+        <h2>Recent Articles</h2>
+        <ul>
+          <li><a class="half-highlight" href="https://www.linkedin.com/pulse/heres-concept-what-we-stopped-bragging-how-busy-actually-alex-morton/" target="_blank">5 Actionable Tips for Less 'Busy-ness' and More Productivity</a></li>
+          <li><a class="half-highlight" href="https://www.linkedin.com/pulse/youre-business-chances-you-probably-have-website-dont-alex-morton" target="_blank">The #1 Question to Ask Yourself When Building Your Website</a></li>
+        </ul>
+      </section>
     </section>
 
-    <section class="articles">
-      <h2>Recent Articles</h2>
-      <ul>
-        <li><a href="https://www.linkedin.com/pulse/heres-concept-what-we-stopped-bragging-how-busy-actually-alex-morton/" target="_blank">5 Actionable Tips for Less 'Busy-ness' and More Productivity</a></li>
-        <li><a href="https://www.linkedin.com/pulse/youre-business-chances-you-probably-have-website-dont-alex-morton" target="_blank">The #1 Question to Ask Yourself When Building Your Website</a></li>
-      </ul>
+
+<!--Example One, Travel-Go-Budget-->
+    <section id="projects">
+      <section class="example">
+        <div class="box image">
+          <a href="https://alexlsalt.github.io/travel-go-budget/" target="_blank"><img src="./resources/images/trav_box.png" alt="screenshot of Travel-Go-Budget website"></a>
+        </div>
+
+        <div class="box explanation">
+          <h2>Travel-Go-Budget</h2>
+          <h3>Random off-the-grid travel tip generator</h3>
+          <button type="button" name="button" id="button-one">Project Details</button>
+          <div id="first-description" class="description one">
+            <ul>
+              <li>This project was created using HTML, CSS, & React</li>
+              <li>When the button is clicked, it randomly generates a budget-friendly travel destination idea.</li>
+              <li>View project site<a href="https://alexlsalt.github.io/travel-go-budget/" target="_blank"> here.</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+
+      <!--Example Two, Mangiamo-->
+
+      <section class="example">
+        <div class="box image">
+          <a href="https://alexlsalt.github.io/mangiamo/" target="_blank"><img src="./resources/images/mangiamo_box.png" alt="screenshot of Mangiamo website"></a>
+        </div>
+
+        <div class="box explanation">
+          <h2>Mangiamo</h2>
+          <h3>Yelp-like app for restaurants</h3>
+          <button type="button" name="button" id="button-two">Project Details</button>
+          <div id="second-description" class="description two">
+            <ul>
+              <li>This application was created using HTML, CSS, & React</li>
+              <li>In conjunction with the Yelp API, the user is able to search for restaurants based on locations around the world.</li>
+              <li>View project site<a href="https://alexlsalt.github.io/mangiamo/" target="_blank"> here.</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!--Example Three, Port Townsend Eats-->
+      <section class="example">
+        <div class="box image">
+          <a href="https://alexlsalt.github.io/port-townsend-eats/" target="_blank"><img src="./resources/images/pt_eats_box.png" alt="screenshot of PT Eats website"></a>
+        </div>
+
+        <div class="box explanation">
+          <h2>Port Townsend Eats</h2>
+          <h3>Small business web page</h3>
+          <button type="button" name="button" id="button-three">Project Details</button>
+          <div id="third-description" class="description three">
+            <ul>
+              <li>This project was created using HTML and CSS</li>
+              <li>I was able to practice good use of semantic tags in HTML as well as responsive mobile design.</li>
+              <li>View project site<a href="https://alexlsalt.github.io/port-townsend-eats/" target="_blank"> here.</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!--Example Three, Port Townsend Eats-->
+        <section class="example">
+          <div class="box image">
+            <a href="https://alexlsalt.github.io/mahalo-productions/" target="_blank"><img src="./resources/images/mahalo_box.png" alt="screenshot of Mahalo website"></a>
+          </div>
+
+          <div class="box explanation">
+            <h2>Mahalo Productions</h2>
+            <h3>Small business web page</h3>
+            <button type="button" name="button" id="button-four">Project Details</button>
+            <div id="fourth-description" class="description four">
+              <ul>
+                <li>This project was created using HTML and CSS</li>
+                <li>I worked on mobile responsiveness and implemented some CSS styling for mouse hover events.</li>
+                <li>View project site<a href="https://alexlsalt.github.io/mahalo-productions/" target="_blank"> here.</a></li>
+              </ul>
+            </div>
+          </div>
+        </section>
     </section>
 
-    <section class="projects" id="projects">
-      <h1>Recent Projects</h1>
-      <div class="project carousel">
-        <a href="https://alexlsalt.github.io/travel-go-budget/" target="_blank"><img src="./resources/images/trav_box.png" alt=""></a>
-        <a href="https://alexlsalt.github.io/mangiamo/" target="_blank"><img src="./resources/images/mangiamo_box.png" alt=""></a>
-        <a href="https://alexlsalt.github.io/paris-walks/" target="_blank"><img src="./resources/images/paris_box.png" alt=""></a>
-      </div>
-      <div class="project carousel">
-        <a href="https://alexlsalt.github.io/shady-optics/" target="_blank"><img src="./resources/images/shady_box.png" alt=""></a>
-        <a href="https://alexlsalt.github.io/mahalo-productions/" target="_blank"><img src="./resources/images/mahalo_box.png" alt=""></a>
-        <a href="https://alexlsalt.github.io/port-townsend-eats/" target="_blank"><img src="./resources/images/pt_eats_box.png" alt=""></a>
-      </div>
-    </section>
 
     <footer class="footer" id="footer">
       <div class="contact">
@@ -85,6 +159,6 @@
     </footer>
 
 
-
+    <script src="/Users/alexmorton/Documents/projects/Portfolio/resources/js/projects.js"></script>
   </body>
 </html>
