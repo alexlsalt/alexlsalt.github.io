@@ -149,42 +149,6 @@ nav span {
   }
 }
 
-/* Main banner section
-
-.main {
-  top: 0;
-  background-image: url('../images/lauren-mancke-60627-unsplash.jpg');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 32rem;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-}
-
-.main h1 {
-  background-color: gray;
-  opacity: 0.8;
-  font-weight: lighter;
-  font-size: 3rem;
-  padding: 1.5rem;
-  width: 100%;
-  margin-bottom: 6rem;
-}
-
-@media only screen and (max-width: 768px) {
-  .main {
-    height: 26rem;
-  }
-
-  .main h1 {
-    width: 100%;
-    font-size: 1.7rem;
-    margin-bottom: 2rem;
-  }
-} */
-
 /* About Alex section */
 
 .mission {
@@ -338,6 +302,18 @@ nav span {
   .articles li {
     font-size: 1.2rem;
   }
+}
+
+/* Bio section */
+
+.bio {
+  width: 75%;
+  margin: 0 auto;
+  margin-top: 1.5rem;
+  border: 2px solid lightblue;
+  padding: 1.5rem;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.2;
 }
 
 
