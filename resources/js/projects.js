@@ -8,10 +8,6 @@ let homeButton = document.getElementById('home-button');
 let buttonOne = document.getElementById('button-one');
 let descrOne = document.getElementById('first-description');
 
-let buttonTwo = document.getElementById('button-two');
-let descrTwo = document.getElementById('second-description');
-
-
 let buttonThree = document.getElementById('button-three');
 let descrThree = document.getElementById('third-description');
 
@@ -30,12 +26,10 @@ projectsButton.onclick = projectsActive;
 
 let homeActive = () => {
   buttonOne.style.display = '';
-  buttonTwo.style.display = '';
   buttonThree.style.display = '';
   buttonFour.style.display = '';
 
   descrOne.style.display = '';
-  descrTwo.style.display = '';
   descrThree.style.display = '';
   descrFour.style.display = '';
 
@@ -57,13 +51,6 @@ let showOne = () => {
 buttonOne.onclick = showOne;
 
 //Second example element
-
-let showTwo = () => {
-  descrTwo.style.display = 'block';
-  buttonTwo.style.display = 'none';
-};
-
-buttonTwo.onclick = showTwo;
 
 //Third example element
 
