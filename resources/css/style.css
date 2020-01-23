@@ -1,3 +1,5 @@
+/* Universal styles */
+
 * {
   box-sizing: border-box;
 }
@@ -53,6 +55,8 @@ h3 {
   transition: background-position 3s;
   background-position: -100% 100%;
 }
+
+
 
 @media only screen and (max-width: 480px) {
   body {
@@ -429,6 +433,7 @@ footer {
   text-align: center;
   padding: 1.2rem;
   padding-bottom: 1.5rem;
+  width: 100%;
 }
 
 footer span {
@@ -439,22 +444,37 @@ footer span {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
   margin-bottom: 0.5rem;
+  width: 80%;
 }
 
 .contact img {
-  margin-left: 2rem;
-  margin-rigth: 2rem;
-  width: 2.8rem;
-  height: 2.8rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  width: 50%;
+  height: auto;
 }
 
 .contact img:hover {
   opacity: 0.5;
 }
 
+@media only screen and (min-width: 1031px) {
+  footer {
+    height: 9rem;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   footer {
-    margin-top: 2rem;
+    margin-top: 1rem;
+  }
+}
+
+@media only screen and (max-width: 539px) {
+    .contact img {
+      width: 2.5rem;
+    }
   }
 }
