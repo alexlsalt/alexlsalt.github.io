@@ -262,10 +262,6 @@ nav span {
 
 /* Projects section */
 
-#projects {
-  display: none;
-}
-
 .example {
   display: flex;
   flex-direction: row;
