@@ -16,25 +16,27 @@
   <body>
 
     <nav>
-      <div class="branding">
-        <img src="./resources/images/favicon.png" alt="">
-        <span>Alex Morton | Front-End Developer</span>
+      <div class="container nav">
+        <div class="branding">
+          <img src="./resources/images/favicon.png" alt="lightblue triangle">
+          <span>Alex Morton | Front-End Developer</span>
+        </div>
+        <ul>
+          <li><a id="home-button" href="index.html">Home</a></li>
+          <li><a id="projects-button" href="projects.html">Projects</a></li>
+          <li><a href="#footer">Contact</a></li>
+        </ul>   
       </div>
-      <ul>
-        <li><a id="home-button" href="index.html">Home</a></li>
-        <li><a id="projects-button" href="projects.html">Projects</a></li>
-        <li><a href="#footer">Contact</a></li>
-      </ul>
+        
     </nav>
 
-    <section id="home">
-      <section class="mission" id="mission">
+    <section id="home" class="container about">
         <div class="sections">
           <div class="section">
-            <img src="./resources/images/alex_gif.gif" alt="girl with glasses">
+            <img src="./resources/images/alex_gif.gif" alt="gif switching between four photos of Alex">
           </div>
           <div class="section words">
-            <h2 class="box-title">Alex Morton</h2>
+            <h2 class="box-title">About Alex</h2>
             <ul class="words">
               <li>UC Berkeley Alum (Go Bears!)</li>
               <li>Passionate about pursuing creative impulses</li>
@@ -43,13 +45,30 @@
 
 <!--Technical Skills section-->
 
-            <div class="achievements">
-              <h2 class="box-title">Technical Skills</h2>
-              <h3>HTML | CSS | Javascript | React</h3>
+            <div class="skills">
+              <h2 class="box-title">Knowledge and Skills</h2>
+              <div class="skills-list">
+                <ul>
+                  <li>JavaScript ES6</li>
+                  <li>ReactJs</li>
+                  <li>HTML5</li>
+                  <li>CSS3</li>
+                </ul>
+                <ul>
+                  <li>NPM / NodeJs</li>
+                  <li>PHP</li>
+                  <li>Git / GitHub</li>
+                </ul>
+                <ul>
+                  <li>DOM Manipulation</li>
+                  <li>Mobile Responsive Design</li>
+                  <li>Adobe PhotoShop</li>
+                </ul>
+              </div>
+              
             </div>
           </div>
         </div>
-      </section>
     </section>
 
     <footer id="footer">

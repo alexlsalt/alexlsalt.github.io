@@ -1,7 +1,12 @@
-/* Universal styles */
+/* UNIVERSAL STYLES */
 
 * {
   box-sizing: border-box;
+}
+
+.container {
+  width: 85%;
+  margin: 0 auto;
 }
 
 html {
@@ -43,20 +48,10 @@ h3 {
 
 .box-title {
   padding: 0.5rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
   border: 3px solid lightblue;
 }
-
-.half-highlight {
-  background-image: linear-gradient(to right, transparent 50%, aqua 50%);
-  background-origin: 0;
-  background-size: 200% 50%;
-  background-repeat: repeat-x;
-  background-position: 0 100%;
-  transition: background-position 3s;
-  background-position: -100% 100%;
-}
-
-
 
 @media only screen and (max-width: 480px) {
   body {
@@ -64,20 +59,22 @@ h3 {
   }
 }
 
-/* Navigation */
+/* -------------NAVIGATION - ALL PAGES ------------------ */
 
 nav {
+  width: 100%;
+  background-color: lightblue;
+}
+
+.nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color: lightblue;
   border: 1px solid lightgray;
   color: white;
   top: 0;
-  width: 100%;
   height: 4rem;
-  z-index: 3;
 }
 
 nav ul {
@@ -115,8 +112,8 @@ nav span {
   margin-left: 1rem;
 }
 
-@media only screen and (max-width: 768px) {
-  nav {
+@media only screen and (max-width: 860px) {
+  .nav {
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -124,6 +121,7 @@ nav span {
     padding-bottom: 1rem;
     text-align: center;
     height: auto;
+    margin-bottom: 0;
   }
 
   nav ul {
@@ -154,20 +152,15 @@ nav span {
   }
 }
 
-/* About Alex section */
+/* --------------ABOUT SECTION - INDEX PAGE -------------- */
 
-.mission {
+.about {
   margin-top: 2rem;
 }
 
 .sections {
   display: flex;
   align-items: center;
-}
-
-.sections h2 {
-  text-align: center;
-  margin-bottom: 1.5rem;
 }
 
 .section img {
@@ -177,9 +170,6 @@ nav span {
   margin-left: 2rem;
 }
 
-.section.words {
-   width: 60%;
-}
 
 .section ul {
   font-size: 1rem;
@@ -195,38 +185,28 @@ nav span {
   color: lightblue;
 }
 
-.achievements {
+.skills {
   margin-top: 1.5rem;
 }
 
-.achievements h1 {
-  color: black;
-  margin-bottom: 1.5rem;
+.skills-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
-.achievements ul {
-  font-size: 1.2rem;
-}
-
-.achievements li {
-  line-height: 1.7;
-  list-style: square;
-}
-
-.achievements a {
-  color: navy;
-}
-
-.achievements a:hover {
-  color: lightblue;
+.skills-list li {
+  line-height: 1.1;
+  font-size: 1rem;
+  list-style: disc;
 }
 
 @media only screen and (max-width: 950px) {
-  .achievements {
+  .skills {
     line-height: 1.7;
   }
 
-  .mission h2 {
+  .about h2 {
     font-size: 1.5rem;
   }
 
@@ -235,9 +215,13 @@ nav span {
   }
 }
 
-@media only screen and (max-width: 768px) {
-  .mission {
-    margin-top: 1rem;
+@media only screen and (max-width: 860px) {
+  .about {
+    margin-top: 0;
+  }
+
+  .section img {
+    display: none;
   }
 
   .sections {
@@ -260,13 +244,83 @@ nav span {
   }
 }
 
-/* Projects section */
+@media only screen and (max-width: 410px) {
+  .skills-list {
+    flex-direction: column;
+  }
+}
+
+
+/* ----------FOOTER - ALL PAGES --------------- */
+
+footer {
+  margin-top: 4rem;
+  background-color: lightblue;
+  height: auto;
+  color: white;
+  text-align: center;
+  padding: 1.2rem;
+  padding-bottom: 1.5rem;
+  width: 100%;
+}
+
+footer span {
+  font-size: 0.8rem;
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-bottom: 0.5rem;
+  width: 80%;
+}
+
+.contact img {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  width: 50%;
+  height: auto;
+}
+
+.contact img:hover {
+  opacity: 0.5;
+}
+
+@media only screen and (min-width: 1031px) {
+  footer {
+    height: 9rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  footer {
+    margin-top: 1rem;
+  }
+}
+
+@media only screen and (max-width: 539px) {
+    .contact img {
+      width: 2.5rem;
+    }
+  }
+}
+
+
+/* -------------------PROJECTS PAGE ------------------------ */
+
+.projects {
+  display: flex;
+  flex-direction: column;
+}
 
 .example {
   display: flex;
   flex-direction: row;
   width: 80%;
-  border: 1px solid gray;
+  border: 1px solid lightgray;
+  box-shadow: 5px 5px lightgray;
   padding: 1.5rem;
   margin: 0 auto;
   margin-top: 1.5rem;
@@ -281,6 +335,7 @@ nav span {
 .example button {
   border: 1px solid black;
   border-radius: 10px;
+  box-shadow: 2px 2px gray;
   padding: 0.7rem;
   font-family: 'Open Sans', sans-serif;
   font-size: 1rem;
@@ -288,22 +343,15 @@ nav span {
 }
 
 .example button:hover {
-  background-color: lightblue;
+  background-color: navy;
   color: white;
+  cursor: pointer;
+  box-shadow: 2px 2px gray;
 }
 
 .box-links {
   margin-top: 1rem;
   line-height: 1.2
-}
-
-.box-links a {
-  color: lightpink;
-}
-
-.box-links a:hover {
-  background-color: lightpink;
-  color: white;
 }
 
 .description {
@@ -312,15 +360,12 @@ nav span {
   margin-top: 0.5rem;
 }
 
-.example a {
-  text-align: center;
-}
-
-.description a {
+.box-links a {
+  color: navy;
   border-bottom: 3px solid lightpink;
 }
 
-.description a:hover {
+.box-links a:hover {
   background-color: lightpink;
 }
 
@@ -389,7 +434,7 @@ nav span {
   }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 984px) {
   h3 {
     font-size: 1.2rem;
   }
@@ -416,61 +461,5 @@ nav span {
 
   .box-links {
     margin: 0 0 1rem 0;
-  }
-}
-
-/* Footer */
-
-footer {
-  margin-top: 4rem;
-  background-color: lightblue;
-  height: auto;
-  color: white;
-  text-align: center;
-  padding: 1.2rem;
-  padding-bottom: 1.5rem;
-  width: 100%;
-}
-
-footer span {
-  font-size: 0.8rem;
-}
-
-.contact {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  margin-bottom: 0.5rem;
-  width: 80%;
-}
-
-.contact img {
-  margin-left: 1rem;
-  margin-right: 1rem;
-  width: 50%;
-  height: auto;
-}
-
-.contact img:hover {
-  opacity: 0.5;
-}
-
-@media only screen and (min-width: 1031px) {
-  footer {
-    height: 9rem;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  footer {
-    margin-top: 1rem;
-  }
-}
-
-@media only screen and (max-width: 539px) {
-    .contact img {
-      width: 2.5rem;
-    }
   }
 }
