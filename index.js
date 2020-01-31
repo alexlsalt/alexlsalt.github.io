@@ -9,8 +9,18 @@ function showOne() {
   };
 
   buttonOne.onclick = showOne;
-  
 
+  // Display Three To-Do's A Day project details
+
+const buttonTwo = document.getElementById('button-two');
+const descrTwo = document.getElementById('second-description');
+
+function showTwo() {
+  descrTwo.style.display = 'block';
+  buttonTwo.style.display = 'none';
+  };
+
+  buttonTwo.onclick = showTwo;
 
 
 // Display Port Townsend Eats project details
