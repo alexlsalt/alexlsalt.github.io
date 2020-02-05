@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./resources/css/reset.css">
-    <link rel="stylesheet" href="./resources/css/style.css">
+    <link rel="stylesheet" href="./resources/css/blog.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="icon" href="./resources/images/favicon.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Playfair+Display|Roboto+Slab" rel="stylesheet">
@@ -31,7 +31,96 @@
     <section class="blog container">
   
       <div class="post-container">
-          <h3>The Power of Learning Over and Over</h3>
+        <!--<h3>Title</h3>
+          <h4>Date, 2020</h4>
+          <p>
+            <br><br>
+
+            <br><br>
+
+            <br><br>
+
+          </p><br><br> -->
+        <h3>Refactoring My Tip Calculator Program</h3>
+          <h4>February 5, 2020</h4>
+          <p>In one of my exercises from my JS course yesterday, we had to create an object, <code>john</code>, representing a person and the number and prices of meals he had on vacation and how much he tipped with each meal. According to instructions, he preferred to tip as follows: <br><br>
+            - For meals less than $50, tip 20% <br>
+            - For meals between $50 and $200, tip 15% <br>
+            - For meals over $200, tip 10% (I know - I wouldn't want to be John's server either.) <br><br>
+
+            Here's the code I started off with for calculating both the individual tips he gave for each meal, as well as each total meal cost (cost of meal with tip included): </p><br><br>
+            <pre>
+              <code>
+      var john = {
+        bills: [124, 48, 268, 180, 42],
+        tips: [],
+        totalMealCosts: [],
+        calcTip: function(){
+          var tip;
+          var totalMealCost;
+          
+          for (let i = 0; i < this.bills.length; i++) {
+            var bill = this.bills[i];
+            if (bill > 0 && bill < 50) {
+              tip = bill * 0.2;
+              totalMealCost = bill + tip;
+            } else if (bill >= 50 && bill <= 200) {
+              tip = bill * 0.15;
+              totalMealCost = bill + tip;
+            } else {
+              tip = bill * 0.1;
+              totalMealCost = bill + tip;
+            } 
+          this.tips.push(tip);
+          this.totalMealCosts.push(totalMealCost);
+          } 
+        }
+      };
+              </code>
+            </pre><br><br>
+            <p>
+              And then after some refactoring, this is my final program (manually transpiled from ES5 to ES6):
+            </p>
+            
+            <br><br>
+            <pre>
+              <code>
+      const john = {
+        bills: [124, 48, 268, 180, 42],
+        tips: [],
+        totalMealCosts: [],
+        calcTip: function(){
+          let totalMealCost;
+          let tipAmount;
+          for (let i = 0; i < this.bills.length; i++) {
+            let bill = this.bills[i];
+            let percentage;
+             if (bill < 50) {
+              percentage = 0.2;
+            } else if (bill >= 50 && bill <= 200) {
+              percentage = 0.15;
+            } else {
+              percentage = 0.1;
+            } 
+          
+          tipAmount = bill * percentage;
+          totalMealCost = bill + tipAmount;
+
+          this.tips.push(tipAmount);
+          this.totalMealCosts.push(totalMealCost);
+           } 
+         }
+       };
+              </code>
+            </pre><br><br>
+          <p>
+            The main thing here is the fact that I removed the tipAmount and totalMealCost variables from each tipping condition and moved them instead to the end of the for loop. <br><br>
+            
+            I'm working more on not repeating myself in my code, and I'm realizing that it all comes down to practicing and eventually reaching higher skill levels - after a certain amount of time, thinking about how your own code could be improved becomes as natural as anything.
+            <br><br>
+          </p><br><br>
+
+          <h3>The Power of Learning Over and Over Again</h3>
           <h4>February 4, 2020</h4>
           <p>
             I'm always overjoyed when something that I've been working on mastering/learning for some time finally settles in with that ephemeral <em>click.</em><br><br>
@@ -41,11 +130,11 @@
             The secret is in putting in the effort day after day after day, even (and especially) when things aren't making sense. It takes learning something (like rock-solid JS foundations) over and over again before the concepts will seem familiar and - dare I say - enjoyable.<br><br>
 
             Proudest moments of the day:<br><br>
-            <ul>
-              <li>Fully understanding the use of the this keyword in multiple exercises</li>
-              <li>Writing a solid, functional tip-calculating program from objects and methods</li>
-            </ul>
-          </p><br><br>
+        
+            - Fully understanding the use of the this keyword in multiple exercises <br>
+            - Writing a solid, functional tip-calculating program from objects and methods
+          </p>
+          <br><br>
         
           <h3>A Blog is Born</h3>
           <h4>February 3, 2020</h4>

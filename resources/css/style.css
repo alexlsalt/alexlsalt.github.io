@@ -468,36 +468,3 @@ footer h1 {
     margin: 0 0 1rem 0;
   }
 }
-
-/***************BLOG****************/
-.blog {
-  padding-top: 1.5rem;
-}
-
-.blog h3 {
-  font-family: 'Playfair Display', serif;
-}
-
-.blog h4 {
-  font-style: italic;
-  font-size: 0.8rem;
-  padding: 0.5rem;
-  text-align: right;
-}
-
-.blog p {
-  line-height: 1.2;
-}
-
-.blog a {
-  color: navy;
-}
-
-.post-container {
-  width: 60%;
-  height: 25rem;
-  margin: auto;
-  overflow: auto;
-  display: flex;
-  flex-direction: column;
-}
