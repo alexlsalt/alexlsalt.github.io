@@ -21,6 +21,7 @@
 
 .blog a {
   color: navy;
+  border-bottom: 3px solid lightblue;
 }
 
 .blog pre {
@@ -30,6 +31,13 @@
 
 .blog code {
   font-family: monospace;
+}
+
+.excerpt {
+  font-style: italic;
+  padding-left: 1.5rem;
+  padding-right: 2rem;
+  border-left: 3px solid #eee;
 }
 
 .post-container {
