@@ -1,37 +1,37 @@
 <!DOCTYPE html>
 
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Alex Morton | Blog</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="./resources/css/reset.css">
-    <link rel="stylesheet" href="./resources/css/blog.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
-    <link rel="icon" href="./resources/images/favicon.png" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Playfair+Display|Roboto+Slab" rel="stylesheet">
-  </head>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Alex Morton | Blog</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./resources/css/reset.css">
+  <link rel="stylesheet" href="./resources/css/blog.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="icon" href="./resources/images/favicon.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Playfair+Display|Roboto+Slab" rel="stylesheet">
+</head>
 
-  <body>
-    <nav>
-      <div class="container nav">
-        <div class="branding">
-          <img src="./resources/images/favicon.png" alt="lightblue triangle">
-          <span>Alex Morton | Front-End Developer</span>
-        </div>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="blog.html">Blog</a></li>
-        </ul>   
+<body>
+  <nav>
+    <div class="container nav">
+      <div class="branding">
+        <img src="./resources/images/favicon.png" alt="lightblue triangle">
+        <span>Alex Morton | Front-End Developer</span>
       </div>
-    </nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </div>
+  </nav>
 
-    <section class="blog container">
-  
-      <div class="post-container">
-        <!--<h3>Title</h3>
+  <section class="blog container">
+
+    <div class="post-container">
+      <!--<h3>Title</h3>
           <h4>Date, 2020</h4>
           <p>
             <br><br>
@@ -42,38 +42,100 @@
 
           </p><br><br> -->
 
-        <h3>Make Time to Make Time</h3>
-          <h4>February 6, 2020</h4>
-          <p>
-            Yesterday I was inspired by a <a href="https://www.youtube.com/watch?v=WK-sZjuXA6A" target="_blank">YouTube video</a> that was serendipitously recommended to me on my feed. I started to think about the idea of 'making time.' <br><br> 
-            Making time to take care of ourselves, making time to cook high-quality meals, making time to sit down and learn or code in a highly focused manner - instead of flying by and trying to get everything done in a 30-minute time slot.
-            <br><br>
-            This idea is great motivation for not simply checking every little thing off the to-do list in a very half-assed and not fully committed way, but instead, accomplishing bigger tasks that move the needle in a more significant way. 
-            <br><br>
-            Along that same line, here's an excerpt I really love from Jason Fried's <a href="https://m.signalvnoise.com/compounding-time/" target="_blank">post</a> on the Signal vs Noise blog:
-            <br><br>
-            <p class="excerpt">There are lots of ways to carve up an hour. 10 x 6. 15 x 4. 30 x 2. 45 + 15. 20 + 20 + 20. The key is not to carve it up. And when you stack it up – one full hour after another – you really see the compound benefits of uninterrupted time. </p><br>
-          <p>I love the idea of being able to fully complete any tasks we have on our plates by leveraging the power of truly uninterrupted time. I'm thinking of a task that we fear will take us the entire day, and then when we sit down to focus solely on that project, it ends up taking a true fraction of the expected time.<br><br>
-          It really all starts with being mindful, and making the time, to do our best work and live our most enjoyable lives.
-          </p>
-          
-          </p>
+      <h3>Better Coding: JavaScript Conditionals</h3>
+      <h4>February 11, 2020</h4>
+      <p>For my latest coding side project, <a href="https://alexlsalt.github.io/dice-game/" target="_blank">Dice
+          Game</a> (adapted from my Jonas S. JS course on Udemy), one piece of the program's logic requires that rolling the die
+        results in a variable holding a random number between 1 and 6. Depending on which number the variable logs,
+        one of six images of the face of a die then shows up on the screen with a bit of nifty DOM manipulation.<br><br>
 
+        When I was first writing out the code, my initial thought was to write out an if/else statement with all of the
+        conditions of the random variable corresponding with each image of the face of the die, as follows: </p><br>
+      <pre>
+        <code>
+      let dice = Math.floor(Math.random() * 6) + 1;
+      
+      let diceImage = document.querySelector('.dice');
+      diceImage.style.display = 'block';
+      
+      if (dice === 1) {
+      diceImage.src = 'dice-1.png';
+      } else if (dice === 2) {
+      diceImage.src = 'dice-2.png';
+      } else if (dice === 3) {
+      diceImage.src = 'dice-3.png';
+      } else if (dice === 4) {
+      diceImage.src = 'dice-4.png';
+      } else if (dice === 5) {
+      diceImage.src = 'dice-5.png';
+      } else if (dice === 6) {
+      diceImage.src = 'dice-6.png';
+      }</code>
+      </pre><br>
+      <p>
+        But then I learned that I could update the diceImage.src using type coercion by adding parts of the image name as a string with the corresponding image number sandwiched in between:
+      </p>
+
+      <br>
+      <pre>
+        <code>
+      var diceImage = document.querySelector('.dice');
+      diceImage.style.display = 'block';
+      diceImage.src = 'dice-' + dice + '.png';</code>
+      </pre><br>
+      <p>
+        Voilà! Three lines of code instead of sixteen!<br><br>
         
+        It's things like this that make me really excited about JavaScript and its (and my!) capabilities. Not only are there a lot of cool programming concepts to keep learning, but there are also endless ways to make coding those programs more and more readable, clear, and effective.<br><br>
+      </p><br><br>
 
-            <br><br>
+      <h3>Make Time to Make Time</h3>
+      <h4>February 6, 2020</h4>
+      <p>
+        Yesterday I was inspired by a <a href="https://www.youtube.com/watch?v=WK-sZjuXA6A" target="_blank">YouTube
+          video</a> that was serendipitously recommended to me on my feed. I started to think about the idea of 'making
+        time.' <br><br>
+        Making time to take care of ourselves, making time to cook high-quality meals, making time to sit down and learn
+        or code in a highly focused manner - instead of flying by and trying to get everything done in a 30-minute time
+        slot.
+        <br><br>
+        This idea is great motivation for not simply checking every little thing off the to-do list in a very half-assed
+        and not fully committed way, but instead, accomplishing bigger tasks that move the needle in a more significant
+        way.
+        <br><br>
+        Along that same line, here's an excerpt I really love from Jason Fried's <a
+          href="https://m.signalvnoise.com/compounding-time/" target="_blank">post</a> on the Signal vs Noise blog:
+        <br><br>
+        <p class="excerpt">There are lots of ways to carve up an hour. 10 x 6. 15 x 4. 30 x 2. 45 + 15. 20 + 20 + 20.
+          The key is not to carve it up. And when you stack it up – one full hour after another – you really see the
+          compound benefits of uninterrupted time. </p><br>
+        <p>I love the idea of being able to fully complete any tasks we have on our plates by leveraging the power of
+          truly uninterrupted time. I'm thinking of a task that we fear will take us the entire day, and then when we
+          sit down to focus solely on that project, it ends up taking a true fraction of the expected time.<br><br>
+          It really all starts with being mindful, and making the time, to do our best work and live our most enjoyable
+          lives.
+        </p>
 
-          </p><br><br>
+      </p>
 
-        <h3>Refactoring My Tip Calculator Program</h3>
-          <h4>February 5, 2020</h4>
-          <p>In one of my exercises from my JS course yesterday, we had to create an object, <code>john</code>, representing a person and the number and prices of meals he had on vacation and how much he tipped with each meal. According to instructions, he preferred to tip as follows: <br><br>
-            - For meals less than $50, tip 20% <br>
-            - For meals between $50 and $200, tip 15% <br>
-            - For meals over $200, tip 10% (I know - I wouldn't want to be John's server either.) <br><br>
 
-            Here's the code I started off with for calculating both the individual tips he gave for each meal, as well as each total meal cost (cost of meal with tip included): </p><br><br>
-            <pre>
+
+      <br><br>
+
+      </p><br><br>
+
+      <h3>Refactoring My Tip Calculator Program</h3>
+      <h4>February 5, 2020</h4>
+      <p>In one of my exercises from my JS course yesterday, we had to create an object, <code>john</code>, representing
+        a person and the number and prices of meals he had on vacation and how much he tipped with each meal. According
+        to instructions, he preferred to tip as follows: <br><br>
+        - For meals less than $50, tip 20% <br>
+        - For meals between $50 and $200, tip 15% <br>
+        - For meals over $200, tip 10% (I know - I wouldn't want to be John's server either.) <br><br>
+
+        Here's the code I started off with for calculating both the individual tips he gave for each meal, as well as
+        each total meal cost (cost of meal with tip included): </p><br><br>
+      <pre>
               <code>
       var john = {
         bills: [124, 48, 268, 180, 42],
@@ -99,15 +161,14 @@
           this.totalMealCosts.push(totalMealCost);
           } 
         }
-      };
-              </code>
+      };</code>
             </pre><br><br>
-            <p>
-              And then after some refactoring, this is my final program (manually transpiled from ES5 to ES6):
-            </p>
-            
-            <br><br>
-            <pre>
+      <p>
+        And then after some refactoring, this is my final program (manually transpiled from ES5 to ES6):
+      </p>
+
+      <br><br>
+      <pre>
               <code>
       const john = {
         bills: [124, 48, 268, 180, 42],
@@ -134,58 +195,79 @@
           this.totalMealCosts.push(totalMealCost);
            } 
          }
-       };
-              </code>
+       };</code>
             </pre><br><br>
-          <p>
-            The main thing here is the fact that I removed the tipAmount and totalMealCost variables from each tipping condition and moved them instead to the end of the for loop. <br><br>
-            
-            I'm working more on not repeating myself in my code, and I'm realizing that it all comes down to practicing and eventually reaching higher skill levels - after a certain amount of time, thinking about how your own code could be improved becomes as natural as anything.
-            <br><br>
-          </p><br><br>
+      <p>
+        The main thing here is the fact that I removed the tipAmount and totalMealCost variables from each tipping
+        condition and moved them instead to the end of the for loop. <br><br>
 
-          <h3>The Power of Learning Over and Over Again</h3>
-          <h4>February 4, 2020</h4>
-          <p>
-            I'm always overjoyed when something that I've been working on mastering/learning for some time finally settles in with that ephemeral <em>click.</em><br><br>
+        I'm working more on not repeating myself in my code, and I'm realizing that it all comes down to practicing and
+        eventually reaching higher skill levels - after a certain amount of time, thinking about how your own code could
+        be improved becomes as natural as anything.
+        <br><br>
+      </p><br><br>
 
-            Today I finished up the Basics section of my JavaScript course, and I'm very proud to say that I flew through it with soaring colors. I wish I could go back to my past self when she was just settling in to trying to figure out what JavaScript was, tap her on the shoulder, and let her know that everything was going to come full circle and click one of these days.<br><br>
+      <h3>The Power of Learning Over and Over Again</h3>
+      <h4>February 4, 2020</h4>
+      <p>
+        I'm always overjoyed when something that I've been working on mastering/learning for some time finally settles
+        in with that ephemeral <em>click.</em><br><br>
 
-            The secret is in putting in the effort day after day after day, even (and especially) when things aren't making sense. It takes learning something (like rock-solid JS foundations) over and over again before the concepts will seem familiar and - dare I say - enjoyable.<br><br>
+        Today I finished up the Basics section of my JavaScript course, and I'm very proud to say that I flew through it
+        with soaring colors. I wish I could go back to my past self when she was just settling in to trying to figure
+        out what JavaScript was, tap her on the shoulder, and let her know that everything was going to come full circle
+        and click one of these days.<br><br>
 
-            Proudest moments of the day:<br><br>
-        
-            - Fully understanding the use of the this keyword in multiple exercises <br>
-            - Writing a solid, functional tip-calculating program from objects and methods
-          </p>
-          <br><br>
-        
-          <h3>A Blog is Born</h3>
-          <h4>February 3, 2020</h4>
-          <p>
-            Here it is - the first official post of my self-developed portfolio and blog site! I'm still trying to wrap my head around dynamically rendering blog posts, so for now, I'm (embarrassingly) statically rendering them within the blog.html page. I feel like I'm on the brink of an idea and it involves pushing posts into an array that renders through DOM manipulation on the page. I know it would be a breeze with React or Gatsby, but for now I'm trying to focus solely on JS.<br><br>
+        The secret is in putting in the effort day after day after day, even (and especially) when things aren't making
+        sense. It takes learning something (like rock-solid JS foundations) over and over again before the concepts will
+        seem familiar and - dare I say - enjoyable.<br><br>
 
-            Speaking of which - I started in today on a JavaScript course on Udemy. I always love the beginnings of any JS lessons, books, etc. I'm pretty aware of how far I've come and I love being able to complete all the exercises with relative ease. Looking forward to spending these next couple of weeks focused on that and continuing to strengthen my JS foundation.<br><br>
+        Proudest moments of the day:<br><br>
 
-            I'm hoping to document at least every day or two. I recently shipped a new side project - <a href="https://alexlsalt.github.io/three-todos/" target="_blank">Three To-Do's A Day</a>. I'll be updating some features and interactivity over the next few weeks, but I just love that feeling of publishing something (even when it's not completely perfect).
-          </p>
-      </div>
+        - Fully understanding the use of the this keyword in multiple exercises <br>
+        - Writing a solid, functional tip-calculating program from objects and methods
+      </p>
+      <br><br>
 
-    </section>
-    
-    
+      <h3>A Blog is Born</h3>
+      <h4>February 3, 2020</h4>
+      <p>
+        Here it is - the first official post of my self-developed portfolio and blog site! I'm still trying to wrap my
+        head around dynamically rendering blog posts, so for now, I'm (embarrassingly) statically rendering them within
+        the blog.html page. I feel like I'm on the brink of an idea and it involves pushing posts into an array that
+        renders through DOM manipulation on the page. I know it would be a breeze with React or Gatsby, but for now I'm
+        trying to focus solely on JS.<br><br>
 
-    <footer id="footer">
-      <h1>Let's connect!</h1>
-      <div class="contact">
-        <a href="https://twitter.com/alexlsaltt" target="_blank"><img src="./resources/images/twitter.svg" alt="twitter icon"></a>
-        <a href="mailto:almorton6@gmail.com"><img src="./resources/images/email.jpeg" alt="envelope icon"></a>
-        <a href="https://github.com/alexlsalt" target="_blank"><img src="./resources/images/github.jpeg" alt="GitHub icon"></a>
-        <a href="https://www.linkedin.com/in/alex-morton-creative/" target="_blank"><img src="./resources/images/linkedin.jpeg" alt="LinkedIn icon"></a>
-      </div>
-      <span>©2019-2020 | Web designed & developed by Alex Morton</span>
-    </footer>
-  </body>
+        Speaking of which - I started in today on a JavaScript course on Udemy. I always love the beginnings of any JS
+        lessons, books, etc. I'm pretty aware of how far I've come and I love being able to complete all the exercises
+        with relative ease. Looking forward to spending these next couple of weeks focused on that and continuing to
+        strengthen my JS foundation.<br><br>
+
+        I'm hoping to document at least every day or two. I recently shipped a new side project - <a
+          href="https://alexlsalt.github.io/three-todos/" target="_blank">Three To-Do's A Day</a>. I'll be updating some
+        features and interactivity over the next few weeks, but I just love that feeling of publishing something (even
+        when it's not completely perfect).
+      </p>
+    </div>
+
+  </section>
+
+
+
+  <footer id="footer">
+    <h1>Let's connect!</h1>
+    <div class="contact">
+      <a href="https://twitter.com/alexlsaltt" target="_blank"><img src="./resources/images/twitter.svg"
+          alt="twitter icon"></a>
+      <a href="mailto:almorton6@gmail.com"><img src="./resources/images/email.jpeg" alt="envelope icon"></a>
+      <a href="https://github.com/alexlsalt" target="_blank"><img src="./resources/images/github.jpeg"
+          alt="GitHub icon"></a>
+      <a href="https://www.linkedin.com/in/alex-morton-creative/" target="_blank"><img
+          src="./resources/images/linkedin.jpeg" alt="LinkedIn icon"></a>
+    </div>
+    <span>©2019-2020 | Web designed & developed by Alex Morton</span>
+  </footer>
+</body>
 
 
 
