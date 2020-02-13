@@ -260,12 +260,13 @@ footer h1 {
   margin: 0 auto;
   margin-bottom: 0.5rem;
   width: 80%;
+  
 }
 
 .contact img {
   margin-left: 1rem;
   margin-right: 1rem;
-  width: 50%;
+  width: 3rem;
   height: auto;
 }
 
@@ -291,3 +292,4 @@ footer h1 {
     }
   }
 }
+
