@@ -41,6 +41,16 @@
             <br><br>
 
           </p><br><br> -->
+      <h3>Weekend Breaks from Coding</h3>
+          <h4>February 18, 2020</h4>
+          <p>It may seem counterintuitive to take breaks over the weekend when learning to code or when you're practicing to really improve your skills, but I've recently learned that taking a couple of solid days off from coding and mental gymnastics is such a cool thing.
+            <br><br>
+          Not only do you come back to your text editor on Monday with renewed motivation for getting back to your projects, but you also have this pool of creativity that almost seems to be bubbling over. What I mean is that those couple of days you gave your mind to take a rest gave it the opportunity to come up with so many great new ideas that you're excited to bring to your own coding practice when the time comes to sit down at your computer.
+            <br><br>
+          This past weekend, we took a break from the city and headed to the French countryside to be with Arthur's family. We relaxed, enjoyed great meals, drank champagne, and played Monopoly.
+            <br><br>
+          And from that, I got inspired to code up my own version of Monopoly! I've yet to start, but I can tell you my brain has already gotten started with mentally laying things out. Stay tuned for that!
+          </p><br><br>
       <h3>Enlightened Self-Interest</h3>
           <h4>February 13, 2020</h4>
           <p>This quote serendipitously came into my life recently, and I haven't been able to get it out of my head:</p>
@@ -69,24 +79,24 @@
         conditions of the random variable corresponding with each image of the face of the die, as follows: </p><br>
       <pre>
         <code>
-      let dice = Math.floor(Math.random() * 6) + 1;
-      
-      let diceImage = document.querySelector('.dice');
-      diceImage.style.display = 'block';
-      
-      if (dice === 1) {
-      diceImage.src = 'dice-1.png';
-      } else if (dice === 2) {
-      diceImage.src = 'dice-2.png';
-      } else if (dice === 3) {
-      diceImage.src = 'dice-3.png';
+    let dice = Math.floor(Math.random() * 6) + 1;
+    
+    let diceImage = document.querySelector('.dice');
+    diceImage.style.display = 'block';
+     
+    if (dice === 1) {
+    diceImage.src = 'dice-1.png';
+    } else if (dice === 2) {
+    diceImage.src = 'dice-2.png';
+    } else if (dice === 3) {
+    diceImage.src = 'dice-3.png';
       } else if (dice === 4) {
-      diceImage.src = 'dice-4.png';
-      } else if (dice === 5) {
-      diceImage.src = 'dice-5.png';
-      } else if (dice === 6) {
-      diceImage.src = 'dice-6.png';
-      }</code>
+    diceImage.src = 'dice-4.png';
+     } else if (dice === 5) {
+    diceImage.src = 'dice-5.png';
+    } else if (dice === 6) {
+    diceImage.src = 'dice-6.png';
+    }</code>
       </pre><br>
       <p>
         But then I learned that I could update the diceImage.src using type coercion by adding parts of the image name as a string with the corresponding image number sandwiched in between:
@@ -95,9 +105,9 @@
       <br>
       <pre>
         <code>
-      var diceImage = document.querySelector('.dice');
-      diceImage.style.display = 'block';
-      diceImage.src = 'dice-' + dice + '.png';</code>
+    var diceImage = document.querySelector('.dice');
+    diceImage.style.display = 'block';
+    diceImage.src = 'dice-' + dice + '.png';</code>
       </pre><br>
       <p>
         Voilà! Three lines of code instead of sixteen!<br><br>
