@@ -31,7 +31,7 @@
   <section class="blog container">
 
     <div class="post-container">
-      <!--<h3>Quote from 10% Happier</h3>
+      <!--<h3>Quote from Rivera to Kahlo and connect to coding</h3>
           <h4>Date, 2020</h4>
           <p>
             <br><br>
@@ -41,6 +41,62 @@
             <br><br>
 
           </p><br><br> -->
+      <h3>Cleaner Code: Adding Methods to Objects</h3>
+          <h4>February 24, 2020</h4>
+          <p>In my JS class, I've been building and erasing and rebuilding a quiz program to fully cement the process into my mind. While it's minorly distressing to erase code I've written, it's more worth it to write it over and over again as a means to getting better and better.
+            <br><br>
+          With this recent quiz program - I've built a Question function constructor to be used for the various questions within the quiz. Here's the bare bones of that constructor: </p>
+
+            <br>
+  <pre>
+    <code>
+    function Question(question, answers, 
+    correctAnswer) {
+      this.question = question;
+      this.answers = answers;
+      this.correctAnswer = correctAnswer;
+    }</code>
+  </pre><br>
+          <p>When I get to the section of my program where I want to display a random question in my list of questions (I've left off the writing of these questions within this particular blog post, but just know that there are three different questions housed in an array, and they're accessed by a variable called random that makes use of the Math.floor, Math.random, and the questions' array length), I need to add a function called displayQuestion. <br><br>
+          
+          So, I could do the following to add the method to the Question object/function constructor as follows: </p><br>
+  <pre>
+    <code>
+     function Question(question, answers, 
+     correctAnswer) {
+       this.question = question;
+       this.answers = answers;
+       this.correctAnswer = correctAnswer;
+       this.displayQuestion = function() {
+        console.log(this.question);
+        
+        for (var i = 0; i < this.answers.length; i++) {
+          console.log(i + ': ' + this.answers[i]);
+        }
+      }
+     }</code>
+   </pre><br>
+   <p>The problem, though, is that it really isn't that clean or readable. So, the solution here would be to use the Object.prototype method to add the displayQuestion method to the Question constructor:</p><br>
+   <pre>
+    <code>
+     function Question(question, answers, 
+     correctAnswer) {
+       this.question = question;
+       this.answers = answers;
+       this.correctAnswer = correctAnswer;
+     }
+     
+     Question.prototype.displayQuestion = function() {
+      console.log(this.question);
+      
+      for (var i = 0; i < this.answers.length; i++) {
+        console.log(i + ': ' + this.answers[i]);
+      }
+    }
+    </code>
+   </pre><br>
+   <p>Now, we can clearly see that the displayQuestion method has been added to the Question function constructor. It wasn't totally necessary to add it in to the constructor itself. I like it!</p>
+          <br><br>
       <h3>Faced with a Fork in the Road</h3>
           <h4>February 21, 2020</h4>
           <p>While I'm committed to improving my programming craft between jobs, I'm still keeping an eye out for any positions that look great. Most notably, if there's a great remote position that catches my eye, I'm happy to package up a nice little application and send it on its way.
