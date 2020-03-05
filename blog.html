@@ -41,6 +41,38 @@
             <br><br>
 
           </p><br><br> -->
+          <h3>The Weird Thing About Deleting Items from Lists in JavaScript</h3>
+          <h4>March 5, 2020</h4>
+          <p>When we create any type of program that includes functionality for adding and deleting items from a list on an app's interface, we need to pay extra attention to the features we include to delete items.
+            <br><br>
+          Before learning how to delete items off of lists, in my mind it seemed as simple as telling that specific item to delete itself from the DOM and it would disappear. But this is so wrong, and it really doesn't make any sense if you really think about it and have some JS experience under your belt.
+            <br><br>
+          Essentially, we can't just tell an item to delete itself. Instead, the deletion needs to be the responsibility of another related item. So, what we actually need is the item's parent element to do the deleting. Once we have access to that parent element, we can use the removeChild property to do so.
+            <br><br>
+          In other words, it's impossible to delete the item itself in JS, so we need to move up from the element to the parent node and then insert that same element to be removed into the removeChild property. Here's an example of that as a method of an object: </p> <br>
+    <pre>
+      <code>
+        deleteListItem: function(selectorID) {
+
+          document.getElementById(selectorID).parentNode
+          .removeChild(document.getElementById(selectorID));
+        }
+      </code>
+    </pre><br>
+    <p>And here's that same example after a bit of cleaning up/prettifying:</p><br>
+    <pre>
+      <code>
+        deleteListItem: function(selectorID) {
+
+          var element = document.getElementById(selectorID);
+
+          element.parentNode.removeChild(element);
+        }
+     </code>
+    </pre><br>
+        <p>
+          The end.
+        </p><br><br>
           <h3>Getting Comfortable With Being Uncomfortable</h3>
           <h4>March 4, 2020</h4>
           <p>Something I continually think about is the idea/necessity of being comfortable with temporary discomfort when it comes to growth or leveling up in life. We can apply this simple yet effective concept to absolutely anything we come up against, and - instead of giving up just as the going gets tough - we can positively thrive over time and after getting more habituated to the discomfort.
