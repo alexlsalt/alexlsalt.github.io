@@ -41,6 +41,39 @@
             <br><br>
 
           </p><br><br> -->
+          <h3>How to Dynamically Set the Date Using JavaScript</h3>
+          <h4>March 12, 2020</h4>
+          <p>Update: I finished Round 2 of my budget app yesterday! After doing so, I took out all of the functionality from the app (but left the function/method and variable names) so that I can go through and fill everything out myself. <br><br> 
+            It's easy to feel like I'm not really doing any groundbreaking learning, but I really do think this repetition in an increasingly challenging way is helping me *so* much.
+            <br><br>
+          Anyway, I learned this nifty trick to dynamically render the date on a web page using the Date object in JavaScript. Here's how that would look using a function: </p>
+            <br>
+<pre>
+  <code>
+     var displayMonth = function() {
+
+       var now, year, month, months;
+
+       now = new Date();
+
+       year = now.getFullYear();
+      
+       months = ['January', 'February', 'March',
+       'April', 'May', 'June', 'July', 'August',
+       'September', 'October', 'November', 
+       'December'];
+
+       month = now.getMonth();
+
+       document.querySelector(***).textContent = 
+       months[month] + ' ' + year;
+     };
+    </code>
+ </pre><br>
+          <p>So, if this code were running today, it would show 'March 2020' on the page, and then next month, it would dynamically render 'April 2020.' <br><br>
+          The <code>now</code> variable pulls up a new instance of the Date object with today's date. The <code>year</code> variable uses that instance to get the current year with the getFullYear method of the Date object. <br><br>
+          I create the <code>months</code> array with the 12 months of the year, and then we can use the getMonth method on the <code>now</code> variable to return a number 0-11 depending on which month it is. For this example, it returns 2 for March (since arrays start from 0). <br><br>
+          Lastly, I update the text content of whatever class I query (this would just be a wrapper in the HTML file around where I wanted the date to go on the site) to the <code>months</code> array at the specific month index (in this case, 2 for March), a space, and the corresponding <code>year</code> variable. Voilà! </p><br><br>
           <h3>Hump Day Plans</h3>
           <h4>March 11, 2020</h4>
           <p>Not too much on my mind this morning. (I always think that and then sit down to write the morning blog post and then write a lot more than anyone bargained for lol.)
