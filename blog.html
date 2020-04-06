@@ -34,6 +34,10 @@
       <!--<h3>Title</h3>
           <h4>Date, 2020</h4>
           <p>Quote inspiration from Max!
+            Destructuring in ES6 
+            Playbook for self-taught devs (projects, opensource, etc)
+            Weekend work and lessons on solving probs yourself and then checking and refactoring
+            Goals for this week: 1) add past editions of newsletter 2) Finish section 8 of JS 3) Map out and start in on Twilio project
             <br><br>
 
             <br><br>
@@ -41,6 +45,60 @@
             <br><br>
 
           </p><br><br> -->
+          <h3>Rinse, Repeat, Refactor</h3>
+          <h4>April 6, 2020</h4>
+          <p>Happy Monday! Yesterday, I sort of broke my 'no work on the weekends' rule and worked a bit on my JS course. Mostly just went over a coding challenge a couple of times to really cement in the information. It was great and I got a lot more practice with writing good, effective code.
+            <br><br>
+          One thing I do when I'm repeating a challenge or a project more than once is to make sure I really stop and think about the solution to something - especially when I'm stuck, but I know I've found a similar answer before.
+            <br><br>
+          It's extremely helpful to get yourself a working solution *before* checking the solution so that you can put the puzzle pieces in your head before glancing at something that will immediately remind you of the correct answer without the work of those neurons firing in your brain to retain the learning.
+            <br><br>
+          I'll put in a little example here. For the coding challenge, we had to generate a couple of reports about the three parks and four streets in a tiny town using classes and functions to display the reports to the console. 
+          <br><br>
+          For one part of the challenge, we needed to log a statement to the console if any of the parks had over 1000 trees (the number of trees was included as a parameter in the Park class as numTrees). Here was my first attempt in thinking it through by myself:
+          <br><br></p>
+<pre>
+  <code>
+  const checkNumTrees = () => {
+    for (const element of parks) {
+      if (element.numTrees > 1000) {
+        console.log(`${element.name} has more than 
+        1000 trees with ${element.numTrees} 
+        trees in total.`);
+      }
+    }
+  };              
+  </code>
+</pre><br>
+
+          <p>So, the above function gets the job done, albeit not very beautifully. Going through it the next time, here's how it could be simplified:</p>
+          <br><br>
+<pre>
+  <code>
+  parks.forEach(element => {
+    if (element.numTrees > 1000) {
+      console.log(`${element.name} has more than 
+      1000 trees with ${element.numTrees} 
+      trees in total.`);
+    }
+  });                      
+  </code>
+</pre><br>
+        <p>So now it's been simplified by using the calling the forEach method on the parks array while still using the if statement within the function. Better, but here's where it could be improved even further:</p>
+          <br><br>
+<pre>
+  <code>
+  const index = p.map(el => el.numTrees).findIndex(
+    el => el >= 1000);
+  console.log(`${p[index].name} has over 1000 
+  trees with a total of ${p[index].numTrees} trees.`);                   
+  </code>
+</pre><br>
+        <p>I'd say that overall, this last refactor gets the job done very cleverly, but for me, the clearest way of writing it would be the second way. I see it, and I immediately know what the function does and what results it should return; whereas, with this last refactor, it would definitely take me a minute to figure it all out.
+        <br><br> 
+        I wonder if that'll change as I get more and more experience (probably). Although I've often heard that it's better to write clear, easy code than it is to write overly clever code. </p>
+        
+          <br><br> 
           <h3>Inspiration and Playing the Infinite Game</h3>
           <h4>April 4, 2020</h4>
           <p>Hi friends! Wow, it's crazy how inspiration can leave for a bit to take a break and then come back tenfold after you just give it a little bit of rest!
@@ -249,24 +307,24 @@
             <br>
 <pre>
   <code>
-     var displayMonth = function() {
+  var displayMonth = function() {
 
-       var now, year, month, months;
+   var now, year, month, months;
 
-       now = new Date();
+   now = new Date();
 
-       year = now.getFullYear();
+   year = now.getFullYear();
       
-       months = ['January', 'February', 'March',
-       'April', 'May', 'June', 'July', 'August',
-       'September', 'October', 'November', 
-       'December'];
+   months = ['January', 'February', 'March',
+   'April', 'May', 'June', 'July', 'August',
+   'September', 'October', 'November', 
+   'December'];
 
-       month = now.getMonth();
+   month = now.getMonth();
 
-       document.querySelector(***).textContent = 
-       months[month] + ' ' + year;
-     };
+   document.querySelector(***).textContent = 
+   months[month] + ' ' + year;
+  };
     </code>
  </pre><br>
           <p>So, if this code were running today, it would show 'March 2020' on the page, and then next month, it would dynamically render 'April 2020.' <br><br>
@@ -325,26 +383,28 @@
           Essentially, we can't just tell an item to delete itself. Instead, the deletion needs to be the responsibility of another related item. So, what we actually need is the item's parent element to do the deleting. Once we have access to that parent element, we can use the removeChild property to do so.
             <br><br>
           In other words, it's impossible to delete the item itself in JS, so we need to move up from the element to the parent node and then insert that same element to be removed into the removeChild property. Here's an example of that as a method of an object: </p> <br>
-    <pre>
-      <code>
-        deleteListItem: function(selectorID) {
-
-          document.getElementById(selectorID).parentNode
-          .removeChild(document.getElementById(selectorID));
-        }
-      </code>
-    </pre><br>
+<pre>
+  <code>
+deleteListItem: function(selectorID) {
+  document.getElementById
+  (selectorID.parentNode
+  .removeChild(document.
+  getElementByID(selectorID));
+}
+    </code>
+</pre><br>
     <p>And here's that same example after a bit of cleaning up/prettifying:</p><br>
-    <pre>
-      <code>
-        deleteListItem: function(selectorID) {
+<pre>
+  <code>
+deleteListItem: function(selectorID) {
 
-          var element = document.getElementById(selectorID);
+   var element = 
+   document.getElementById(selectorID);
 
-          element.parentNode.removeChild(element);
-        }
-     </code>
-    </pre><br>
+  element.parentNode.removeChild(element);
+ }
+  </code>
+</pre><br>
         <p>
           The end.
         </p><br><br>
@@ -453,49 +513,52 @@
             <br>
   <pre>
     <code>
-    function Question(question, answers, 
-    correctAnswer) {
-      this.question = question;
-      this.answers = answers;
-      this.correctAnswer = correctAnswer;
-    }</code>
+  function Question(question, answers, 
+  correctAnswer) {
+    this.question = question;
+    this.answers = answers;
+    this.correctAnswer = correctAnswer;
+  }</code>
   </pre><br>
           <p>When I get to the section of my program where I want to display a random question in my list of questions (I've left off the writing of these questions within this particular blog post, but just know that there are three different questions housed in an array, and they're accessed by a variable called random that makes use of the Math.floor, Math.random, and the questions' array length), I need to add a function called displayQuestion. <br><br>
           
           So, I could do the following to add the method to the Question object/function constructor as follows: </p><br>
-  <pre>
-    <code>
-     function Question(question, answers, 
-     correctAnswer) {
-       this.question = question;
-       this.answers = answers;
-       this.correctAnswer = correctAnswer;
-       this.displayQuestion = function() {
-        console.log(this.question);
+<pre>
+  <code>
+function Question(question, answers, 
+correctAnswer) {
+  this.question = question;
+  this.answers = answers;
+  this.correctAnswer = correctAnswer;
+  this.displayQuestion = function() {
+   console.log(this.question);
         
-        for (var i = 0; i < this.answers.length; i++) {
-          console.log(i + ': ' + this.answers[i]);
-        }
-      }
-     }</code>
-   </pre><br>
+   for (var i = 0; 
+   i < this.answers.length; i++) {
+     console.log(i + ': ' + 
+     this.answers[i]);
+   }
+ }
+}</code>
+</pre><br>
    <p>The problem, though, is that it really isn't that clean or readable. So, the solution here would be to use the Object.prototype method to add the displayQuestion method to the Question constructor:</p><br>
    <pre>
     <code>
-     function Question(question, answers, 
-     correctAnswer) {
-       this.question = question;
-       this.answers = answers;
-       this.correctAnswer = correctAnswer;
-     }
+function Question(question, answers, 
+correctAnswer) {
+  this.question = question;
+  this.answers = answers;
+  this.correctAnswer = correctAnswer;
+}
      
-     Question.prototype.displayQuestion = function() {
-      console.log(this.question);
+Question.prototype.displayQuestion = 
+function() {
+ console.log(this.question);
       
-      for (var i = 0; i < this.answers.length; i++) {
-        console.log(i + ': ' + this.answers[i]);
-      }
-    }
+ for (var i = 0; i < this.answers.length; i++) {
+   console.log(i + ': ' + 
+   this.answers[i]);
+ }}
     </code>
    </pre><br>
    <p>Now, we can clearly see that the displayQuestion method has been added to the Question function constructor. It wasn't totally necessary to add it in to the constructor itself. I like it!</p>
@@ -554,24 +617,26 @@
         conditions of the random variable corresponding with each image of the face of the die, as follows: </p><br>
       <pre>
         <code>
-    let dice = Math.floor(Math.random() * 6) + 1;
+  let dice = Math.floor(
+    Math.random() * 6) + 1;
     
-    let diceImage = document.querySelector('.dice');
-    diceImage.style.display = 'block';
+  let diceImage = 
+  document.querySelector('.dice');
+  diceImage.style.display = 'block';
      
-    if (dice === 1) {
-    diceImage.src = 'dice-1.png';
-    } else if (dice === 2) {
-    diceImage.src = 'dice-2.png';
-    } else if (dice === 3) {
-    diceImage.src = 'dice-3.png';
-      } else if (dice === 4) {
-    diceImage.src = 'dice-4.png';
-     } else if (dice === 5) {
-    diceImage.src = 'dice-5.png';
-    } else if (dice === 6) {
-    diceImage.src = 'dice-6.png';
-    }</code>
+  if (dice === 1) {
+  diceImage.src = 'dice-1.png';
+  } else if (dice === 2) {
+  diceImage.src = 'dice-2.png';
+  } else if (dice === 3) {
+  diceImage.src = 'dice-3.png';
+     } else if (dice === 4) {
+  diceImage.src = 'dice-4.png';
+   } else if (dice === 5) {
+  diceImage.src = 'dice-5.png';
+  } else if (dice === 6) {
+  diceImage.src = 'dice-6.png';
+  }</code>
       </pre><br>
       <p>
         But then I learned that I could update the diceImage.src using type coercion by adding parts of the image name as a string with the corresponding image number sandwiched in between:
@@ -580,9 +645,11 @@
       <br>
       <pre>
         <code>
-    var diceImage = document.querySelector('.dice');
-    diceImage.style.display = 'block';
-    diceImage.src = 'dice-' + dice + '.png';</code>
+  var diceImage = 
+  document.querySelector('.dice');
+  diceImage.style.display = 'block';
+  diceImage.src = 'dice-' + dice + 
+  '.png';</code>
       </pre><br>
       <p>
         Voilà! Three lines of code instead of sixteen!<br><br>
@@ -638,31 +705,34 @@
         each total meal cost (cost of meal with tip included): </p><br><br>
       <pre>
               <code>
-      var john = {
-        bills: [124, 48, 268, 180, 42],
-        tips: [],
-        totalMealCosts: [],
-        calcTip: function(){
-          var tip;
-          var totalMealCost;
+var john = {
+  bills: [124, 48, 268, 180, 42],
+  tips: [],
+  totalMealCosts: [],
+  calcTip: function(){
+    var tip;
+    var totalMealCost;
           
-          for (let i = 0; i < this.bills.length; i++) {
-            var bill = this.bills[i];
-            if (bill > 0 && bill < 50) {
-              tip = bill * 0.2;
-              totalMealCost = bill + tip;
-            } else if (bill >= 50 && bill <= 200) {
-              tip = bill * 0.15;
-              totalMealCost = bill + tip;
-            } else {
-              tip = bill * 0.1;
-              totalMealCost = bill + tip;
-            } 
-          this.tips.push(tip);
-          this.totalMealCosts.push(totalMealCost);
-          } 
-        }
-      };</code>
+    for (let i = 0; 
+    i < this.bills.length; i++) {
+      var bill = this.bills[i];
+      if (bill > 0 && bill < 50) {
+        tip = bill * 0.2;
+        totalMealCost = bill + tip;
+      } else if (bill >= 50 && 
+      bill <= 200) {
+        tip = bill * 0.15;
+        totalMealCost = bill + tip;
+      } else {
+        tip = bill * 0.1;
+        totalMealCost = bill + tip;
+      } 
+      this.tips.push(tip);
+    this.totalMealCosts.
+    push(totalMealCost);
+    } 
+  }
+ };</code>
             </pre><br><br>
       <p>
         And then after some refactoring, this is my final program (manually transpiled from ES5 to ES6):
@@ -671,32 +741,35 @@
       <br><br>
       <pre>
               <code>
-      const john = {
-        bills: [124, 48, 268, 180, 42],
-        tips: [],
-        totalMealCosts: [],
-        calcTip: function(){
-          let totalMealCost;
-          let tipAmount;
-          for (let i = 0; i < this.bills.length; i++) {
-            let bill = this.bills[i];
-            let percentage;
-             if (bill < 50) {
-              percentage = 0.2;
-            } else if (bill >= 50 && bill <= 200) {
-              percentage = 0.15;
-            } else {
-              percentage = 0.1;
-            } 
+  const john = {
+    bills: [124, 48, 268, 180, 42],
+    tips: [],
+    totalMealCosts: [],
+    calcTip: function(){
+      let totalMealCost;
+      let tipAmount;
+      for (let i = 0; 
+      i < this.bills.length; i++) {
+        let bill = this.bills[i];
+        let percentage;
+         if (bill < 50) {
+          percentage = 0.2;
+        } else if (bill >= 50 && 
+        bill <= 200) {
+          percentage = 0.15;
+        } else {
+          percentage = 0.1;
+        } 
           
-          tipAmount = bill * percentage;
-          totalMealCost = bill + tipAmount;
+      tipAmount = bill * percentage;
+      totalMealCost = bill + tipAmount;
 
-          this.tips.push(tipAmount);
-          this.totalMealCosts.push(totalMealCost);
-           } 
-         }
-       };</code>
+      this.tips.push(tipAmount);
+      this.totalMealCosts.
+      push(totalMealCost);
+        } 
+      }
+    };</code>
             </pre><br><br>
       <p>
         The main thing here is the fact that I removed the tipAmount and totalMealCost variables from each tipping
