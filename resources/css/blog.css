@@ -1,5 +1,4 @@
 /*Blog styles*/
-
 .blog {
   padding-top: 1.5rem;
 }
@@ -32,6 +31,7 @@
 .blog code {
   font-family: monospace;
 }
+
 
 .excerpt {
   font-style: italic;
