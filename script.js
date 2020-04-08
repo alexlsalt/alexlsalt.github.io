@@ -1,3 +1,15 @@
+// Letters from Nelson project details
+
+const button5 = document.getElementById('button-five');
+const descr5 = document.getElementById('fifth-description');
+
+function showFive() {
+  descr5.style.display = 'block';
+  button5.style.display = 'none';
+  };
+
+  button5.onclick = showFive;
+
 // Display Travel Go Budget project details
 
 const buttonOne = document.getElementById('button-one');
