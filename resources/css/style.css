@@ -325,12 +325,22 @@ footer h1 {
 .example {
   display: flex;
   flex-direction: row;
+  align-items: center;
   width: 80%;
   border: 1px solid lightgray;
   box-shadow: 5px 5px lightgray;
   padding: 1.5rem;
   margin: 0 auto;
   margin-top: 1.5rem;
+}
+
+.example h2 {
+  font-size: 2rem;
+}
+
+.example h3 {
+  font-size: 1.7rem;
+  color: #010101;
 }
 
 .example img {
@@ -347,6 +357,7 @@ footer h1 {
   font-family: 'Open Sans', sans-serif;
   font-size: 1rem;
   color: navy;
+  transition: background-color 500ms ease;
 }
 
 .example button:hover {
@@ -370,6 +381,7 @@ footer h1 {
 .box-links a {
   color: navy;
   border-bottom: 3px solid lightpink;
+  line-height: 1.1;
 }
 
 .box-links a:hover {
@@ -413,7 +425,7 @@ footer h1 {
   color: black;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1350px) {
 
   .example img {
     width: 20rem;
@@ -422,7 +434,7 @@ footer h1 {
   }
 
   h2 {
-    font-size: 1.9rem;
+    font-size: 1.3rem;
   }
 
   h3 {
@@ -435,16 +447,13 @@ footer h1 {
   }
 
   .box-links {
-    font-size: 0.8rem;
+    font-size: 1rem;
     margin: 1rem 0 0 0;
 
   }
 }
 
 @media only screen and (max-width: 984px) {
-  h3 {
-    font-size: 1.2rem;
-  }
 
   .example {
     flex-direction: column;
@@ -454,7 +463,7 @@ footer h1 {
 
   .example img {
     width: 80%;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.2rem;
   }
 
   .explanation {
@@ -472,13 +481,6 @@ footer h1 {
 }
 
 @media only screen and (max-width: 760px) {
-  h2 {
-    font-size: 1.5rem;
-  }
-
-  h3 {
-    font-size: 1.3rem;
-  }
 
   .explanation {
     margin-left: 0;
