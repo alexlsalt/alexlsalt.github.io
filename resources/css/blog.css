@@ -21,6 +21,11 @@
 .blog a {
   color: navy;
   border-bottom: 3px solid lightblue;
+  transition: background-color 750ms ease;
+}
+
+.blog a:hover {
+  background-color: lightblue;
 }
 
 .blog pre {
