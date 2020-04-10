@@ -18,6 +18,13 @@
   line-height: 1.2;
 }
 
+.blog li {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+  margin-top: 0.5rem;
+  line-height: 1.2rem;
+}
+
 .blog a {
   color: navy;
   border-bottom: 3px solid lightblue;
