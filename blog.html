@@ -44,6 +44,42 @@
             <br><br>
 
           </p><br><br> -->
+          <h3>Level Unlocked!</h3>
+          <h4>April 22, 2020</h4>
+          <p>Yesterday, I left off mentioning that I was going to focus on getting each user's account synced up with their own unique settings within my hackathon app. I'm over-the-moon excited and proud to announce that I solved the issue in a relatively short amount of time yesterday (yaaaay).
+            <br><br>
+          For a little more context, I was writing logic in my program that basically said 'If a user inputs a certain item into their list (Firestore backend), add an ID property to that item that was an exact match with their own user unique ID (uid) (Firebase authentication).'
+            <br><br>
+          The issue was that whenever I'd log in as one user's email address (a@example.com) and add new items to their account list - I'd log out and then log in again as another test user (b@example.com), and the first user's information and input settings would show up (er, not ideal).
+            <br><br>
+          After a bit of good ol' fashioned thinking (and a good amount of trial and error), I decided to try to wrap the logic in the Firebase method <code>onAuthStateChanged</code> so that it essentially ran the code again for each new user that logs in. I also had to make sure to remove the list items upon a user logging out so they don't show up for someone else logging in (I'm sure there's a more secure alternative for how to do this, but at this point, I'm trying to focus on getting a *working* model of the app!)
+          <br><br>
+          Here's a snippet of the code wrapped in the <code>onAuthStateChanged</code> mentioned above:
+          </p><br><br> 
+<pre>
+<code>
+auth.onAuthStateChanged(user => {
+   if(user) {
+    db.collection('contacts').get()
+    .then(snapshot => {
+       snapshot.docs.forEach(doc => {
+        if(doc.data().id === 
+        auth.currentUser.uid) {
+          renderContact(doc);
+        }
+      })
+    })
+  } 
+});                       
+</code>
+</pre><br>
+
+        <p>Today, I'm focused on rendering the list items in realtime (so as soon as the user enters an input value to be rendered, it won't be necessary to refresh the page to get the info to appear on the UI - it will automatically update. That'll be pretty easy, I know I've watched a tutorial about this - just need to refresh my brain!
+          <br><br>
+        Also, I'm going to spend some time going over the Twilio documentation to figure out what needs to be done to implement the SMS reminder functionality (I *might* look into Whatsapp messaging instead if it's simpler - we shall see). Onward!
+        </p><br><br>
+
+          
           <h3>Programming and the Bigger Picture</h3>
           <h4>April 21, 2020</h4>
           <p>Yesterday, I was an absolute beast with coding and my Twilio hackathon project. Each time I came up against something challenging, I was able to break the issue down into smaller, more manageable parts.
