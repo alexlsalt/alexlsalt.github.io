@@ -37,6 +37,13 @@
           <p>Destructuring in ES6 
             Playbook for self-taught devs (projects, opensource, etc)
             Be the creative director of your own life
+          Child nodes! Figured it out!! Inserting adjacent HTML inside of something 
+            if (doc.data().name == 'Alex' || doc.data().name == 'Kylie') {
+          document.getElementById(`${id}`).style.backgroundColor = 'red';
+          // document.getElementById(`${id}`).remove('.cross');
+          document.getElementById(`${id}`).childNodes[2].insertAdjacentHTML('beforeend', '<i class="fas fa-check"></i>');
+
+        }
             <br><br>
 
             <br><br>
@@ -44,6 +51,22 @@
             <br><br>
 
           </p><br><br> -->
+          <h3>I'm Making Great Progress on my Side Project and I'm Freaking Ecstatic</h3>
+          <h4>May 26, 2020</h4>
+          <p>Wow, happy Tuesday - I'm on a freaking roll since last night. Allow me to explain...
+            <br><br>
+          So, yesterday I finally implemented a timing feature for my Wellbean app. Essentially, after a given number of hours (depending on the frequency set i.e. Daily, Weekly, etc), each list item will either stay white (default, timer hasn't expired) or turn red (expired, timer has run out). 
+          <br><br>
+          When the list item/contact turns red, it means the user should consider contacting that particular contact, based on their pre-set contact suggestion frequency. </p>
+          <br><br>
+          <img src="./resources/images/blog/wellbean_timer.png" style="width:80%; height:auto; margin:0 auto" alt="Screenshot of Wellbean interface">
+          <br><br>
+          <p>Ah! I'm so freaking excited about it. It's crazy how it's all coming together, both in the code and in my mind! I'm so proud of it all. 
+          <br><br>  
+          I'm going to focus today's work on learning how to implement Firebase rules for the database so that I can publicly release it while keeping the data private.
+          <br><br>
+          Then, after today, I'm going to wrap it all up, record a demo on Loom, craft up a big readME for the GitHub repo, and shout from the rooftops! Cheers.
+          </p><br><br> 
           <h3>Continuing on with my Wellbean Project</h3>
           <h4>May 25, 2020</h4>
           <p>Easy, breezy Monday morning. I'll admit, the past week and a half has been spent in a bit of a funk for me. Totally normal after a big work-push in the couple of weeks leading up to that tired period, so I tried my best to really (really!) step back from pushing myself. 
