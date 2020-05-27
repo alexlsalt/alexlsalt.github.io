@@ -1,5 +1,17 @@
 // Letters from Nelson project details
 
+const button6 = document.getElementById('button-six');
+const descr6 = document.getElementById('sixth-description');
+
+function showSix() {
+  descr6.style.display = 'block';
+  button6.style.display = 'none';
+  };
+
+  button6.onclick = showSix;
+
+// Letters from Nelson project details
+
 const button5 = document.getElementById('button-five');
 const descr5 = document.getElementById('fifth-description');
 

@@ -326,6 +326,10 @@ footer h1 {
   flex-direction: column;
 }
 
+.projects h2 {
+  text-align: center; 
+}
+
 .example {
   display: flex;
   flex-direction: row;
@@ -354,21 +358,23 @@ footer h1 {
 }
 
 .example button {
-  border: 1px solid black;
-  border-radius: 10px;
-  box-shadow: 2px 2px gray;
-  padding: 0.7rem;
+  color:#ffffff;
+  background-color:gray;
+  border: none;
+  box-shadow: 4px 4px lightblue;
   font-family: 'Open Sans', sans-serif;
-  font-size: 1rem;
-  color: navy;
-  transition: background-color 500ms ease;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  padding: 0.7rem;
 }
 
 .example button:hover {
-  background-color: navy;
-  color: white;
+  background-color:lightblue;
+  color:#000000;
+  box-shadow: 4px 4px gray;
   cursor: pointer;
-  box-shadow: 2px 2px gray;
 }
 
 .box-links {
