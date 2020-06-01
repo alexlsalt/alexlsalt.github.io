@@ -35,14 +35,7 @@
           <h4>Date, 2020</h4>
           <p>Destructuring in ES6 
             Playbook for self-taught devs (projects, opensource, etc)
-            Be the creative director of your own life
-          Child nodes! Figured it out!! Inserting adjacent HTML inside of something 
-            if (doc.data().name == 'Alex' || doc.data().name == 'Kylie') {
-          document.getElementById(`${id}`).style.backgroundColor = 'red';
-          // document.getElementById(`${id}`).remove('.cross');
-          document.getElementById(`${id}`).childNodes[2].insertAdjacentHTML('beforeend', '<i class="fas fa-check"></i>');
-
-        }
+            Be the creative director of your own life            
             <br><br>
 
             <br><br>
@@ -50,6 +43,73 @@
             <br><br>
 
           </p><br><br> -->
+          <h3>Inserting Adjacent HTML Without Messing Up Formatting</h3>
+          <h4>June 1, 2020</h4>          
+          <p>
+            Here's a cool solution to a problem I was having last week! The Problem:
+            <br><br>
+            So, I have an unordered list in my Wellbean app that renders the contacts a user inputs into the UI. Once the contact
+            is added, a timer is set on each list item and displays a red background once that timer has run out, depending on the
+            frequency the user chooses when inputting it (i.e. 'Daily,' 'Weekly,' etc). </p>
+          <br><br>
+          <img src="resources/images/blog/wellbean_timer.png" style="width:80%; height:auto; margin:0 auto"
+            alt="screenshot of wellbean UI">
+          <br><br>
+          <p>Now, I also wanted to add a green checkmark to the list item, right next to the red X, that the user could click on
+            to reset the timer and revert the list item's appearance to its default white background.
+            <br><br>
+            Since the list item's display is set to flex, and it's flex-direction CSS property is set to space-between - this
+            means that all items will be spread out across the length of the list and spaced out between. So, when I tried to use
+            the insertAdjacentHTML method on my unordered list, the inserted checkmark made the list item's elements (the name,
+            frequency, the X, and the checkmark) super wonky and not at all aligned with the default appearance of each list item:</p>
+          <br><br>
+          <img src="resources/images/blog/wellbean_incorrect.png" style="width:80%; height:auto; margin:0 auto" alt="">
+          <br><br>
+          <p>The solution:
+            <br><br>
+            After a bit of thinking on this and some trial and error, I realized that since all nested HTML elements are child
+            elements of whatever they're nested beneath, I could isolate exactly where I wanted to place the green checkmark (i.e.
+            right next to the red X), by using the childNodes property on the list item itself and then grabbing the exact spot where
+            the red X shows up.
+            <br><br>
+            In other words, the default list item (with the white background, when the timer hasn't run out), contains three
+            children:</p>
+            <br>
+          <ol>
+            <li>The name (childNodes[0])</li>
+            <li>The frequency (childNodes[1])</li>
+            <li>The red X (childNodes[2])</li>
+          </ol>
+          <br><br>
+          <img src="resources/images/blog/wellbean_listitem.png" style="width:80%; height:auto; margin:0 auto" alt="">
+          <br><br><p>
+          Since I wanted to place the green checkmark right next to the red X, I needed to use the insertAdjacentHTML property on
+          that specific element (the red X).
+          <br><br>
+          So! Here's what I came up with:
+          </p><br><br>
+<pre>
+<code> 
+  document.getElementById(`${id}`)
+  .childNodes[2].
+  insertAdjacentHTML('beforeend', 
+  // Font Awesome green checkmark //);
+</code>
+</pre><br> 
+          <p>
+            As you can see, by isolating the part of the list item that contains the red X (a div whose innerHTML is set as the
+            red cross, you can insert your new HTML (the green checkmark) just inside of the div and next to the red X, instead of inserting it as adjacent
+            HTML into the entire list item, causing its formatting to get a little crazy and all over the place.
+            <br><br>
+            And here's what that looks like now:
+            <br><br></p>
+            <img src="resources/images/blog/wellbean_correct.png" style="width:80%; height:auto; margin:0 auto" alt="">
+            <br><br>
+            <p>
+            Hope this helps a bit if you're having trouble inserting adjacent HTML into an element with several child elements
+            nested within! The childNodes[i] property will help you enormously.
+          
+          </p><br><br>
           <h3>Giving Structure to the Creative Sparkles and Spirals</h3>
           <h4>May 29, 2020</h4>
           <p>Happy Friday, folks! Today's a pretty chill day for me - nothing too crazy to share just yet, since I'm in the very beginning stages of a big project I've been wanting to start for a while now.
