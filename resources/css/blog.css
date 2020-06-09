@@ -183,14 +183,23 @@ nav li {
 }
 
 nav a, nav button {
-  border: 1px white solid;
-  border-radius: 10%;
-  padding: 0.5rem;
+  color:#ffffff;
+  background-color:gray;
+  border: 2px solid gray;
+  box-shadow: 4px 4px lightblue;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  padding: 0.7rem;
 }
 
 nav a:hover, nav button:hover {
-  background-color: white;
-  color: gray;
+  background-color:lightblue;
+  color:gray;
+  box-shadow: 4px 4px gray;
+  cursor: pointer;
 }
 
 nav span {

@@ -41,14 +41,19 @@ h1 {
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
+  text-transform: uppercase;
 }
 
 h3 {
   color: black;
   text-align: center;
-  font-size: 1.7rem;
+  font-size: 2rem;
   line-height: 1.2;
+}
+
+img:hover {
+  opacity: 0.7;
 }
 
 .box-title {
@@ -92,14 +97,23 @@ nav li {
 }
 
 nav a, nav button {
-  border: 1px white solid;
-  border-radius: 10%;
-  padding: 0.5rem;
+  color:#ffffff;
+  background-color:gray;
+  border: 2px solid gray;
+  box-shadow: 4px 4px lightblue;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  padding: 0.7rem;
 }
 
 nav a:hover, nav button:hover {
-  background-color: white;
-  color: gray;
+  background-color:lightblue;
+  color:gray;
+  box-shadow: 4px 4px gray;
+  cursor: pointer;
 }
 
 nav span {
@@ -182,7 +196,7 @@ nav span {
 .section li {
   list-style: circle;
   margin: 0.3rem 0.8rem;
-  font-size: 1.3rem;
+  font-size: 1.78rem;
 }
 
 .section a {
@@ -343,11 +357,10 @@ footer h1 {
 }
 
 .example h2 {
-  font-size: 2rem;
+  background: linear-gradient(to top, lightblue 70%, transparent 30%);
 }
 
 .example h3 {
-  font-size: 1.7rem;
   color: #010101;
 }
 
@@ -444,11 +457,11 @@ footer h1 {
   }
 
   h2 {
-    font-size: 1.3rem;
+    font-size: 2rem;
   }
 
   h3 {
-    font-size: 1rem;
+    font-size: 1.78rem;
   }
 
   .explanation {
