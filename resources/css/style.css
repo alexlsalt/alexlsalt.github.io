@@ -71,6 +71,19 @@ img:hover {
 
 /* -------------NAVIGATION - ALL PAGES ------------------ */
 
+.announcement_bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1.5rem;
+  color: #fff;
+  background-color: lightpink;
+}
+
+.announcement_bar span {
+  margin: 0 auto;
+}
+
 nav {
   width: 100%;
   background-color: lightblue;
