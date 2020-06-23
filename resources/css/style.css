@@ -75,13 +75,15 @@ img:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 1.5rem;
+  height: auto;
   color: #fff;
   background-color: lightpink;
 }
 
 .announcement_bar span {
   margin: 0 auto;
+  text-align: center;
+  padding: 0.5rem;
 }
 
 nav {
