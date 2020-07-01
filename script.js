@@ -1,4 +1,16 @@
-// Letters from Nelson project details
+// Ladies Code Collective project details
+
+const button7 = document.getElementById('button-seven');
+const descr7 = document.getElementById('seventh-description');
+
+function showSeven() {
+  descr7.style.display = 'block';
+  button7.style.display = 'none';
+  };
+
+  button7.onclick = showSeven;
+
+// Wellbean project details
 
 const button6 = document.getElementById('button-six');
 const descr6 = document.getElementById('sixth-description');
