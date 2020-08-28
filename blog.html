@@ -62,6 +62,14 @@
             <br><br>
             So, baby steps.
             <br><br>
+            I had a total learning moment yesterday, though, when I discovered that you can't just insert a script into an 'insertAdjacentHTML' call in JS because by the time your script gets added, the page has already loaded - so, as I understood it, it's kind of like your script arrived at the station as the train had already left.
+            <br><br>
+            To get around that, I had to create a script for each podcast-episode-section-HTML after the page was loaded and createElement('script') with and set the src of each as each individual epiosde's URL.
+            <br><br>
+            I also had to create a data-key attribute for each episode so that I could match up the episode to the corresponding element in the 'episodes' object that contains each episode's information.
+            <br><br>
+            That moment when everything came together, though - ugh! I live for that!!!
+            <br><br>
             Next step here is to get the episodes to populate by making a call to the Buzzsprout API (Buzzsprout is the podcast hosting service I use). This is great, because I've been wanting to build more things with APIs, so I can add that in there!
             <br><br>
             That'll be on today's plate, as well as more practice in my React ebook, which I'm steadily working my way through. I'm building a clone of a file list in GitHub at the moment, so I'm going to take what I've done fully apart in order to rebuild it using the knowledge I've already gained.
