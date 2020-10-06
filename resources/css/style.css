@@ -14,7 +14,7 @@ body {
 }
 
 html {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 18px;
   line-height: 1.4;
 }
@@ -29,8 +29,12 @@ button {
   background-color: none;
 }
 
-h1, h2, h3, nav, ul {
-  font-family: 'Open Sans', sans-serif;
+h1,
+h2,
+h3,
+nav,
+ul {
+  font-family: "Open Sans", sans-serif;
   font-weight: 500;
 }
 
@@ -108,15 +112,16 @@ nav ul {
 }
 
 nav li {
-  padding-left: 1rem
+  padding-left: 1rem;
 }
 
-nav a, nav button {
-  color:#ffffff;
-  background-color:gray;
+nav a,
+nav button {
+  color: #ffffff;
+  background-color: gray;
   border: 2px solid gray;
   box-shadow: 4px 4px lightpink;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 0.1rem;
@@ -124,9 +129,10 @@ nav a, nav button {
   padding: 0.7rem;
 }
 
-nav a:hover, nav button:hover {
-  background-color:lightblue;
-  color:gray;
+nav a:hover,
+nav button:hover {
+  background-color: lightblue;
+  color: gray;
   box-shadow: 4px 4px gray;
   cursor: pointer;
 }
@@ -135,7 +141,7 @@ nav span {
   margin-left: 1rem;
   font-size: 1.5rem;
   font-weight: 600;
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
 }
 
 .branding {
@@ -213,6 +219,8 @@ nav span {
 
 .words p {
   text-align: center;
+  width: 90%;
+  margin: 0 auto;
 }
 
 .section a {
@@ -292,10 +300,9 @@ nav span {
   }
 }
 
-
 /* ----------FOOTER - ALL PAGES --------------- */
 
-footer { 
+footer {
   margin-top: 4rem;
   background-color: lightblue;
   height: auto;
@@ -311,7 +318,7 @@ footer span {
 }
 
 footer h1 {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   padding-bottom: 1rem;
   margin-left: 0;
 }
@@ -323,7 +330,6 @@ footer h1 {
   margin: 0 auto;
   margin-bottom: 0.5rem;
   width: 80%;
-  
 }
 
 .contact img {
@@ -350,12 +356,10 @@ footer h1 {
 }
 
 @media only screen and (max-width: 539px) {
-    .contact img {
-      width: 2.5rem;
-    }
+  .contact img {
+    width: 2.5rem;
   }
 }
-
 
 /* -------------------PROJECTS PAGE ------------------------ */
 
@@ -365,7 +369,7 @@ footer h1 {
 }
 
 .projects h2 {
-  text-align: center; 
+  text-align: center;
 }
 
 .example {
@@ -395,11 +399,11 @@ footer h1 {
 }
 
 .example button {
-  color:#ffffff;
-  background-color:gray;
+  color: #ffffff;
+  background-color: gray;
   border: none;
   box-shadow: 4px 4px lightblue;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 0.1rem;
@@ -408,15 +412,15 @@ footer h1 {
 }
 
 .example button:hover {
-  background-color:lightblue;
-  color:#000000;
+  background-color: lightblue;
+  color: #000000;
   box-shadow: 4px 4px gray;
   cursor: pointer;
 }
 
 .box-links {
   margin-top: 1rem;
-  line-height: 1.2
+  line-height: 1.2;
 }
 
 .description {
@@ -454,7 +458,6 @@ footer h1 {
   text-align: center;
 }
 
-
 .explanation {
   display: flex;
   flex-direction: column;
@@ -473,7 +476,6 @@ footer h1 {
 }
 
 @media only screen and (max-width: 1350px) {
-
   .example img {
     width: 20rem;
     height: auto;
@@ -496,12 +498,10 @@ footer h1 {
   .box-links {
     font-size: 1rem;
     margin: 1rem 0 0 0;
-
   }
 }
 
 @media only screen and (max-width: 984px) {
-
   .example {
     flex-direction: column;
     justify-content: center;
@@ -529,7 +529,6 @@ footer h1 {
 }
 
 @media only screen and (max-width: 760px) {
-
   .explanation {
     margin-left: 0;
     width: 90%;
@@ -546,5 +545,4 @@ footer h1 {
     font-size: 1rem;
     text-align: left;
   }
-    
 }
