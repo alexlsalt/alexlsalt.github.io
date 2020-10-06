@@ -196,18 +196,18 @@ nav span {
   align-items: center;
 }
 
-.section img {
+/* .section img {
   width: 80%;
   height: auto;
   text-align: center;
   margin-left: 2rem;
-}
+} */
 
 .words {
   list-style: circle;
   margin: 0.3rem 0.8rem;
   font-size: 1.5rem;
-  width: 70%;
+  width: 100%;
   line-height: 1.1;
 }
 
