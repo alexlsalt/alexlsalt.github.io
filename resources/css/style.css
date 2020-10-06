@@ -203,19 +203,28 @@ nav span {
   margin-left: 2rem;
 }
 
-
-.section ul {
-  font-size: 1rem;
-}
-
-.section li {
+.words {
   list-style: circle;
   margin: 0.3rem 0.8rem;
-  font-size: 1.78rem;
+  font-size: 1.5rem;
+  width: 70%;
+  line-height: 1.1;
+}
+
+.words p {
+  text-align: center;
 }
 
 .section a {
-  color: lightblue;
+  color: #67818a;
+  border-bottom: 3px solid lightblue;
+  padding-bottom: 0.1rem;
+  transition: background-color 0.7s;
+}
+
+.section a:hover {
+  background-color: lightblue;
+  color: #fff;
 }
 
 .skills {
