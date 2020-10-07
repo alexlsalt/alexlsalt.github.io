@@ -247,7 +247,7 @@ nav span {
 
 .skills-list li {
   line-height: 1.1;
-  font-size: 1rem;
+  font-size: 1.2rem;
   list-style: disc;
 }
 
@@ -366,10 +366,7 @@ footer h1 {
 .projects {
   display: flex;
   flex-direction: column;
-}
-
-.projects h2 {
-  text-align: center;
+  margin-top: 2rem;
 }
 
 .example {
