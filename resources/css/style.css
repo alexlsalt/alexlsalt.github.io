@@ -474,7 +474,7 @@ footer h1 {
 
 @media only screen and (max-width: 1350px) {
   .example img {
-    width: 20rem;
+    width: 80%;
     height: auto;
     border: 3px solid black;
   }
@@ -507,7 +507,6 @@ footer h1 {
   }
 
   .example img {
-    width: 80%;
     margin-bottom: 1.2rem;
   }
 
