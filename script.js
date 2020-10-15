@@ -1,5 +1,17 @@
 // Ladies Code Collective project details
 
+const button8 = document.getElementById('button-eight');
+const descr8 = document.getElementById('eighth-description');
+
+function showEight() {
+  descr8.style.display = 'block';
+  button8.style.display = 'none';
+  };
+
+  button8.onclick = showEight;
+
+// Ladies Code Collective project details
+
 const button7 = document.getElementById('button-seven');
 const descr7 = document.getElementById('seventh-description');
 
