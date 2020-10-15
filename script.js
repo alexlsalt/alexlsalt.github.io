@@ -1,27 +1,14 @@
-function displayProjectInfo(str) {
-  const button = document.querySelector(`#button-${str}`);
-  const description = document.querySelector(`#description-${str}`);
+// Function to display project info for each button
 
-  button.addEventListener('click', () => {
-    description.style.display = 'block';
-    button.style.display = 'none';
+document.querySelectorAll('.button').forEach(button => {
+  button.addEventListener('click', event => {
+    const values = event.target.id.split('-');
+    const num = values[1];
+
+    // Hide 'project details' button
+    document.querySelector(`#button-${num}`).style.display = 'none';
+
+    // Display project information for specific box
+    document.querySelector(`#description-${num}`).style.display = 'block'
   });
-}
-
-// SYTYCF project details
-displayProjectInfo('eight');
-
-// Ladies Code Collective project details
-displayProjectInfo('seven');
-
-// Wellbean project details
-displayProjectInfo('six');
-
-// Letters from Nelson project details
-displayProjectInfo('five');
-
-// Display Three To-Do's A Day project details
-displayProjectInfo('two');
-
-// Display Travel Go Budget project details
-displayProjectInfo('three');
+})
