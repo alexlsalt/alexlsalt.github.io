@@ -333,7 +333,7 @@ footer h1 {
 
 .example h2 {
   background: linear-gradient(to top, transparent 70%, lightblue 30%);
-  padding-bottom: 1rem;
+  padding-bottom: 0.5rem;
 }
 
 .example img {
@@ -382,19 +382,14 @@ footer h1 {
   background-color: lightpink;
 }
 
-.example ul {
-  margin-left: 1.5rem;
-}
-
 .example li {
   line-height: 1.2;
-  padding-bottom: 0.5rem;
   font-size: 1.2rem;
+  list-style: disc;
   text-align: left;
-  display: flex;
-  flex-wrap: wrap;
+  padding-bottom: 0.5rem;
+  margin-left: 0.5rem;
 }
-
 
 .box {
   display: flex;
@@ -404,49 +399,27 @@ footer h1 {
 }
 
 .explanation {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: auto;
   width: 90%;
-}
-
-.explanation h3 {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.explanation a {
-  color: black;
+  margin: 0 auto;
 }
 
 @media only screen and (max-width: 984px) {
   .example {
-    justify-content: center;
-    align-items: center;
     width: 95%;
   }
 
   .description {
     width: 100%;
-    margin-left: 1rem;
   }
 }
 
 @media only screen and (max-width: 760px) {
-  .explanation {
-    margin-left: 0;
-    width: 90%;
-    margin: 0 auto;
-  }
-
-  .box-links a {
-    margin-left: 0;
-  }
-
   .example li {
     line-height: 1.2;
     padding: 0.5rem;
-    text-align: left;
+  }
+
+  .example img {
+    width: 100%;
   }
 }
