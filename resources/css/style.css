@@ -44,11 +44,15 @@ h1 {
   font-size: 2rem;
 }
 
+h2 {
+  font-size: 2rem;
+}
+
 h3 {
   color: black;
   text-align: center;
-  font-size: 2rem;
-  line-height: 1.2;
+  font-size: 1.27rem;
+  line-height: 1.78rem;
 }
 
 img:hover {
@@ -230,14 +234,19 @@ nav span {
 
 .skills-list li {
   line-height: 1.1;
+  margin: 0.5rem;
   font-size: 1.2rem;
   list-style: disc;
 }
 
-@media only screen and (max-width: 580px) {
+@media only screen and (max-width: 670px) {
   .skills-list {
     flex-direction: column;
     margin-left: 2rem;
+  }
+
+  .skills-list li {
+    margin: 0;
   }
 }
 
@@ -323,18 +332,15 @@ footer h1 {
 }
 
 .example h2 {
-  background: linear-gradient(to top, lightblue 70%, transparent 30%);
-}
-
-.example h3 {
-  color: #010101;
+  background: linear-gradient(to top, transparent 70%, lightblue 30%);
+  padding-bottom: 1rem;
 }
 
 .example img {
-  width: 35rem;
+  width: 80%;
   height: auto;
   border: 3px solid black;
-  margin-bottom: 1.2rem;
+  margin-top: 1rem;
 }
 
 .example button {
@@ -358,7 +364,6 @@ footer h1 {
 }
 
 .box-links {
-  line-height: 1.2;
   margin: 1rem 0;
 }
 
@@ -403,7 +408,7 @@ footer h1 {
   flex-direction: column;
   justify-content: center;
   height: auto;
-  margin-left: 1.5rem;
+  width: 90%;
 }
 
 .explanation h3 {
@@ -415,36 +420,11 @@ footer h1 {
   color: black;
 }
 
-@media only screen and (max-width: 1350px) {
-  .example img {
-    width: 80%;
-    height: auto;
-    border: 3px solid black;
-  }
-
-  h2 {
-    font-size: 2rem;
-  }
-
-  h3 {
-    font-size: 1.78rem;
-  }
-
-  .explanation {
-    margin-left: 0;
-    width: 90%;
-  }
-}
-
 @media only screen and (max-width: 984px) {
   .example {
     justify-content: center;
     align-items: center;
     width: 95%;
-  }
-
-  .explanation {
-    margin: 0 auto;
   }
 
   .description {
