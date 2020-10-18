@@ -371,7 +371,7 @@ footer h1 {
 
 .example {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   width: 80%;
   border: 1px solid lightgray;
@@ -500,7 +500,6 @@ footer h1 {
 
 @media only screen and (max-width: 984px) {
   .example {
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 95%;
