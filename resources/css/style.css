@@ -44,11 +44,6 @@ h1 {
   font-size: 2rem;
 }
 
-h2 {
-  font-size: 2.2rem;
-  text-transform: uppercase;
-}
-
 h3 {
   color: black;
   text-align: center;
@@ -63,13 +58,17 @@ img:hover {
 .box-title {
   padding: 0.5rem;
   text-align: center;
+  margin-top: 2rem;
   margin-bottom: 1.5rem;
   border: 3px solid lightblue;
+  font-size: 2rem;
+  text-transform: uppercase;
 }
 
-@media only screen and (max-width: 480px) {
-  body {
-    margin: 0 auto;
+@media only screen and (max-width: 670px) {
+  .box-title {
+    font-size: 1.5rem;
+    padding: 0.25rem;
   }
 }
 
@@ -105,7 +104,7 @@ nav {
   height: 4rem;
 }
 
-nav ul {
+.nav ul {
   list-style: none;
   display: flex;
   padding-right: 1.5rem;
@@ -193,44 +192,27 @@ nav span {
 
 /* --------------ABOUT SECTION - INDEX PAGE -------------- */
 
-.about {
-  margin-top: 2rem;
-}
-
-.sections {
-  display: flex;
-  align-items: center;
-}
-
-/* .section img {
-  width: 80%;
-  height: auto;
-  text-align: center;
-  margin-left: 2rem;
-} */
-
-.words {
+.bio {
   list-style: circle;
-  margin: 0.3rem 0.8rem;
   font-size: 1.5rem;
   width: 100%;
   line-height: 1.1;
+  text-align: center;
 }
 
-.words p {
-  text-align: center;
+.bio p {
   width: 90%;
   margin: 0 auto;
 }
 
-.section a {
+.bio a {
   color: #67818a;
   border-bottom: 3px solid lightblue;
   padding-bottom: 0.1rem;
   transition: background-color 0.7s;
 }
 
-.section a:hover {
+.bio a:hover {
   background-color: lightblue;
   color: #fff;
 }
@@ -243,6 +225,7 @@ nav span {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  text-align: left;
 }
 
 .skills-list li {
@@ -251,52 +234,10 @@ nav span {
   list-style: disc;
 }
 
-@media only screen and (max-width: 950px) {
-  .skills {
-    line-height: 1.7;
-  }
-
-  .about h2 {
-    font-size: 1.5rem;
-  }
-
-  .section li {
-    font-size: 1rem;
-  }
-}
-
-@media only screen and (max-width: 860px) {
-  .about {
-    margin-top: 0;
-  }
-
-  .section img {
-    display: none;
-  }
-
-  .sections {
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-  }
-
-  .section {
-    margin: 0 auto;
-  }
-
-  .section.words {
-    width: 100%;
-    margin: 2rem;
-  }
-
-  .section.words ul {
-    margin-left: 1rem;
-  }
-}
-
-@media only screen and (max-width: 410px) {
+@media only screen and (max-width: 580px) {
   .skills-list {
     flex-direction: column;
+    margin-left: 2rem;
   }
 }
 
@@ -366,7 +307,7 @@ footer h1 {
 .projects {
   display: flex;
   flex-direction: column;
-  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .example {
@@ -378,7 +319,7 @@ footer h1 {
   box-shadow: 5px 5px lightgray;
   padding: 1.5rem;
   margin: 0 auto;
-  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .example h2 {
@@ -442,13 +383,13 @@ footer h1 {
 
 .example li {
   line-height: 1.2;
-  list-style: circle;
   padding-bottom: 0.5rem;
   font-size: 1.2rem;
   text-align: left;
   display: flex;
   flex-wrap: wrap;
 }
+
 
 .box {
   display: flex;
