@@ -393,6 +393,7 @@ footer h1 {
   width: 35rem;
   height: auto;
   border: 3px solid black;
+  margin-bottom: 1.2rem;
 }
 
 .example button {
@@ -416,8 +417,8 @@ footer h1 {
 }
 
 .box-links {
-  margin-top: 1rem;
   line-height: 1.2;
+  margin: 1rem 0;
 }
 
 .description {
@@ -429,7 +430,6 @@ footer h1 {
 .box-links a {
   color: navy;
   border-bottom: 3px solid lightpink;
-  line-height: 1.1;
 }
 
 .box-links a:hover {
@@ -446,6 +446,8 @@ footer h1 {
   padding-bottom: 0.5rem;
   font-size: 1.2rem;
   text-align: left;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .box {
@@ -491,11 +493,6 @@ footer h1 {
     margin-left: 0;
     width: 90%;
   }
-
-  .box-links {
-    font-size: 1rem;
-    margin: 1rem 0 0 0;
-  }
 }
 
 @media only screen and (max-width: 984px) {
@@ -505,10 +502,6 @@ footer h1 {
     width: 95%;
   }
 
-  .example img {
-    margin-bottom: 1.2rem;
-  }
-
   .explanation {
     margin: 0 auto;
   }
@@ -516,10 +509,6 @@ footer h1 {
   .description {
     width: 100%;
     margin-left: 1rem;
-  }
-
-  .box-links {
-    margin: 0 0 1rem 0;
   }
 }
 
@@ -536,8 +525,7 @@ footer h1 {
 
   .example li {
     line-height: 1.2;
-    padding-bottom: 0.5rem;
-    font-size: 1rem;
+    padding: 0.5rem;
     text-align: left;
   }
 }
