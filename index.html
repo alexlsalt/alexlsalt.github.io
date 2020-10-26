@@ -17,6 +17,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="icon" href="./resources/images/favicon.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Playfair+Display|Roboto+Slab" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!--Meta tag to make mobile-y responsive-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -79,13 +80,13 @@
 
     <!-- PROJECTS SECTION START-->
 
-    <section class="projects container">
+    <section class="projects container" data-aos-anchor-placement="top-center">
 
-      <h2 class="box-title">Latest Projects</h2>
+      <h2 class="box-title" data-aos-duration="2000">Latest Projects</h2>
 
       <!-- So You Think You Can France example  -->
       <section class="example">
-        <div class="box">
+        <div class="box" data-aos='fade-up' data-aos-duration="2000">
           <h2>So You Think You Can France</h2>
           <h3>French City Guide Resource & Blog (in progress)</h3>
           <a href="https://soyouthinkyoucanfrance.netlify.app/" target="_blank" rel="noopener"><img src="./resources/images/sytycf_box.png" alt="screenshot of So You Think You Can France UI"></a>
@@ -107,7 +108,7 @@
       </section>
 
       <!-- Ladies Code Collective example  -->
-      <section class="example">
+      <section class="example" data-aos='fade-up' data-aos-duration="2000">
         <div class="box image">
           <h2>Ladies Code Collective</h2>
           <h3>Website for podcast and online community</h3>
@@ -130,7 +131,7 @@
       </section>
       
       <!-- Wellbean example  -->
-      <section class="example">
+      <section class="example" data-aos='fade-up' data-aos-duration="2000">
         <div class="box image">
           <h2>Wellbean</h2>
           <h3>App reminding users to stay in touch with loved ones</h3>
@@ -153,7 +154,7 @@
       </section>
 
     <!-- Letters from Nelson example  -->
-      <section class="example">
+      <section class="example" data-aos='fade-up' data-aos-duration="2000">
         <div class="box image">
           <h2>Letters from Nelson</h2>
           <h3>Interactive landing page for an email newsletter</h3>
@@ -177,7 +178,7 @@
     
       <!--Example Two, Three ToDos-->
 
-        <section class="example">
+        <section class="example" data-aos='fade-up' data-aos-duration="2000">
           <div class="box image">
             <h2>Three To-Do's A Day</h2>
             <h3>To-do list with maximum of three items each day</h3>
@@ -202,7 +203,7 @@
 
       <!--Example Three, Travel Go Budget-->
     
-        <section class="example">
+        <section class="example" data-aos='fade-up' data-aos-duration="2000">
           <div class="box image">
             <h2>Travel-Go-Budget</h2>
             <h3>Random off-the-grid travel tip generator</h3>
@@ -238,5 +239,9 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
