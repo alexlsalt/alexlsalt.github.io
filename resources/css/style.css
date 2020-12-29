@@ -93,6 +93,15 @@ img:hover {
   padding: 0.5rem;
 }
 
+
+.announcement_bar a {
+  transition: color 500ms ease;
+}
+
+.announcement_bar a:hover {
+  color: gray;
+}
+
 nav {
   width: 100%;
   background-color: lightblue;
