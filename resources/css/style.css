@@ -285,7 +285,7 @@ footer h1 {
 .contact {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: baseline;
   margin: 0 auto;
   margin-bottom: 0.5rem;
   width: 80%;
