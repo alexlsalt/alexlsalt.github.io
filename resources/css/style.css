@@ -93,7 +93,6 @@ img:hover {
   padding: 0.5rem;
 }
 
-
 .announcement_bar a {
   transition: color 500ms ease;
 }
@@ -209,7 +208,7 @@ nav span {
   list-style: circle;
   font-size: 1.5rem;
   width: 100%;
-  line-height: 1.1;
+  line-height: 1.2;
   text-align: center;
 }
 
@@ -257,6 +256,25 @@ nav span {
   .skills-list li {
     margin: 0;
   }
+}
+
+/* ---------- NOTABLE LINKS --------------- */
+
+.link-container {
+  display: flex;
+  border: 1px solid black;
+  padding: 16px 12px;
+  margin-top: 10px;
+}
+
+.links {
+  text-align: center;
+}
+
+.links img {
+  margin: 10px;
+  height: 200px;
+  width: 375px;
 }
 
 /* ----------FOOTER - ALL PAGES --------------- */
